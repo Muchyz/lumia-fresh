@@ -216,7 +216,19 @@ export function Export() {
   ]
   return (
     <>
-      <Head t="Export & Wholesale" p="Flexible supply for importers, wholesalers and distributors." bg="greenhouse.jpg" />
+      <section className="exhero">
+        <div className="exbg" />
+        <div className="wrap">
+          <span className="badge"><Airplane size={18} weight="duotone" /> Export &amp; Wholesale</span>
+          <h1>Kenyan organic herbs, <em>delivered worldwide</em></h1>
+          <p>Flexible supply for importers, wholesalers and distributors, with contract farming and year-round harvests.</p>
+          <div className="row">
+            <Link to="/contact" className="btn btn-lime">Request a quote <PaperPlaneTilt size={18} weight="bold" /></Link>
+            <a href={wa('Hello LUMIA FRESH, I would like export pricing.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
+          </div>
+          <div className="hchips"><span><Airplane size={18} weight="duotone" /> Air freight</span><span><Boat size={18} weight="duotone" /> Sea freight</span><span><Package size={18} weight="duotone" /> Export packing</span></div>
+        </div>
+      </section>
 
       <div className="wrap"><div className="exfacts">
         {facts.map(([I, t, d], i) => (
@@ -240,17 +252,18 @@ export function Export() {
           <p className="lead">{PRODUCTS.length} products across three categories.</p></div>
         <div className="excats">
           {cats.map(([c, I, d], i) => (
-            <Reveal key={c} delay={i * 90}><Link to={'/products?cat=' + c} className="excat">
-              <div className="ico"><I size={30} weight="duotone" /></div>
-              <div><h3>{c}</h3><p>{d}</p></div>
+            <Reveal key={c} delay={i * 90}><Link to={'/products?cat=' + c} className="excat" style={{ backgroundImage: `linear-gradient(180deg,#06281a10,#06281af0),url(/images/${{ Herbs: 'cilantro.jpg', Flowers: 'calendula.jpg', Botanicals: 'moringa.jpg' }[c]})` }}>
               <span className="exnum">{PRODUCTS.filter(p => p.cat === c).length}</span>
+              <div className="ico"><I size={28} weight="duotone" /></div>
+              <h3>{c}</h3><p>{d}</p>
+              <span className="exgo">View products <ArrowRight size={16} weight="bold" /></span>
             </Link></Reveal>))}
         </div>
       </div></section>
 
       <section><div className="wrap">
         <div className="center"><span className="pill">Shipping</span><h2>Air and sea freight</h2></div>
-        <div className="grid">{ship.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div>
+        <div className="grid exship">{ship.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div>
       </div></section>
 
       <section className="dark exterms"><div className="wrap">
