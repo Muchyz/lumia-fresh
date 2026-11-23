@@ -108,7 +108,7 @@ export function Home() {
           <div className="grid">{WHY.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div></div>
       </section>
 
-      <section id="offer">
+      <section className="offer" id="offer">
         <div className="wrap"><Sec e="What we offer" t="Built for international buyers" />
           <div className="grid">{OFFERS.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div></div>
       </section>

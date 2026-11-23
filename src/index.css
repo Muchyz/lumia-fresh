@@ -155,3 +155,32 @@ html,body{max-width:100%;overflow-x:clip}
  .dark .card p{font-size:.8rem;line-height:1.5}
  .dark .card:before{font-size:2rem;right:12px}
 }
+/* ---- Offer section glow-up ---- */
+.offer{position:relative;overflow:hidden;background:
+ radial-gradient(500px 280px at 100% 0%,#c6ee5a2e,transparent 70%),
+ radial-gradient(500px 300px at 0% 100%,#1a9a5524,transparent 70%),
+ linear-gradient(180deg,#f3faf5,#e6f4ea)}
+.offer:before{content:"";position:absolute;inset:0;background:url(/images/basil.jpg) center/cover;opacity:.07;pointer-events:none}
+.offer .wrap{position:relative}
+.offer h2{position:relative;padding-bottom:18px}
+.offer h2:after{content:"";position:absolute;left:50%;bottom:0;width:64px;height:4px;border-radius:4px;transform:translateX(-50%);background:linear-gradient(90deg,var(--g2),var(--lime))}
+.offer .grid{counter-reset:o;gap:16px}
+.offer .card{position:relative;counter-increment:o;border:1px solid #d6ebdc;border-top:4px solid var(--g2);background:linear-gradient(180deg,#fff,#f7fcf8)}
+.offer .card:before{content:"0" counter(o);position:absolute;right:16px;top:10px;font-family:'Fraunces',serif;font-size:2.8rem;font-weight:700;color:#1a9a5518;line-height:1}
+.offer .card:nth-child(2){border-top-color:var(--gold)}
+.offer .card:nth-child(3){border-top-color:#25a2d6}
+.offer .card:hover{border-color:var(--g2)}
+.offer .ico{background:linear-gradient(135deg,#1a9a55,#0b3d2a);color:#fff;box-shadow:0 10px 22px #1a9a5545}
+.offer .card:nth-child(2) .ico{background:linear-gradient(135deg,#f2b53d,#d98a10);box-shadow:0 10px 22px #f2b53d55}
+.offer .card:nth-child(3) .ico{background:linear-gradient(135deg,#25a2d6,#0f6f99);box-shadow:0 10px 22px #25a2d655}
+@media(max-width:700px){
+ .offer{padding:60px 0}
+ .offer .grid{grid-template-columns:1fr 1fr}
+ .offer .grid>.rv:nth-child(3){grid-column:1/-1}
+ .offer .card .pad{padding:16px}
+ .offer .ico{width:46px;height:46px;border-radius:14px;margin-bottom:12px}
+ .offer .ico svg{width:24px;height:24px}
+ .offer .card h3{font-size:.95rem}
+ .offer .card p{font-size:.8rem;line-height:1.5}
+ .offer .card:before{font-size:2rem;right:12px}
+}
