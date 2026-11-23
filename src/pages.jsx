@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -51,6 +51,7 @@ const STEPS = [
   ['Harvest & pack', 'Cut fresh, graded, packed in export cartons.'],
   ['Ship worldwide', 'Air or sea freight with full export documents.'],
 ]
+const STEP_ICONS = [ChatCircleDots, FileText, Package, Airplane]
 
 export function Home() {
   const names = [...PRODUCTS, ...PRODUCTS]
@@ -120,10 +121,10 @@ export function Home() {
           </div></Reveal></div>
       </section>
 
-      <section className="alt" id="process">
+      <section className="alt process" id="process">
         <div className="wrap"><Sec e="How it works" t="From our farm to your market" />
-          <div className="grid steps">{STEPS.map(([t, d], i) => (
-            <Reveal key={t} delay={i * 90}><div className="step"><h3>{t}</h3><p>{d}</p></div></Reveal>))}</div></div>
+          <div className="tl">{STEPS.map(([t, d], i) => { const I = STEP_ICONS[i]; return (
+            <Reveal key={t} delay={i * 120}><div className="tstep"><div className="tdot"><I size={28} weight="duotone" /><span>{i + 1}</span></div><div className="tbody"><h3>{t}</h3><p>{d}</p></div></div></Reveal>) })}</div></div>
       </section>
 
       <section><div className="wrap"><div className="cta">

@@ -197,3 +197,22 @@ html,body{max-width:100%;overflow-x:clip}
  .ofcta{padding:22px 18px;text-align:center;justify-content:center}
  .ofcta .btn{width:100%}
 }
+/* ---- How it works: timeline ---- */
+.process{background:radial-gradient(500px 260px at 0% 0%,#c6ee5a26,transparent 70%),radial-gradient(500px 300px at 100% 100%,#1a9a5522,transparent 70%),linear-gradient(180deg,#eef8f1,#e3f2e8)}
+.process h2{position:relative;padding-bottom:18px}
+.process h2:after{content:"";position:absolute;left:50%;bottom:0;width:64px;height:4px;border-radius:4px;transform:translateX(-50%);background:linear-gradient(90deg,var(--g2),var(--lime))}
+.tl{position:relative;margin-top:44px;padding-left:2px}
+.tl:before{content:"";position:absolute;left:29px;top:28px;bottom:28px;width:3px;border-radius:3px;background:repeating-linear-gradient(180deg,var(--g2) 0 8px,transparent 8px 14px);opacity:.55}
+.tstep{display:flex;gap:16px;align-items:flex-start;margin-bottom:18px;position:relative}
+.tdot{position:relative;z-index:1;flex:none;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;color:#fff;background:linear-gradient(135deg,#1a9a55,#0b3d2a);box-shadow:0 0 0 6px #1a9a5520,0 10px 22px #1a9a5550}
+.tdot span{position:absolute;top:-5px;right:-5px;width:24px;height:24px;border-radius:50%;background:var(--lime);color:var(--g0);font-size:.78rem;font-weight:800;display:grid;place-items:center;border:2px solid #fff}
+.tbody{flex:1;background:linear-gradient(145deg,#fffffff2,#ffffffb8);backdrop-filter:blur(8px);border:1px solid #d6ebdc;border-radius:20px;padding:16px 18px;box-shadow:0 8px 24px #0b3d2a14}
+.tbody h3{font-size:1.05rem;margin-bottom:4px}
+.tbody p{color:var(--mut);font-size:.9rem;line-height:1.5}
+.tl>.rv:last-child .tstep{margin-bottom:0}
+@media(min-width:860px){
+ .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:56px}
+ .tl:before{left:12%;right:12%;top:29px;bottom:auto;width:auto;height:3px;background:repeating-linear-gradient(90deg,var(--g2) 0 8px,transparent 8px 14px)}
+ .tstep{flex-direction:column;align-items:center;text-align:center;margin:0}
+ .tbody{width:100%;margin-top:6px}
+}
