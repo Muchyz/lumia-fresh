@@ -16,12 +16,6 @@ export const PRODUCTS = [
     "img": "parsley.jpg"
   },
   {
-    "name": "Basil",
-    "cat": "Herbs",
-    "desc": "Fresh basil in several varieties: Sweet Aroma 2, Prospera, Thai Basil and Red Basil.",
-    "img": "basil.jpg"
-  },
-  {
     "name": "Dill leaves",
     "cat": "Herbs",
     "desc": "Feathery, fragrant dill for salads, fish and pickling.",
@@ -131,5 +125,15 @@ PRODUCTS.push(
       { name: 'Chocolate mint', desc: 'Peppermint type with a cocoa-like note for desserts and drinks.', img: 'chocolatemint.jpg' },
       { name: 'Curly mint', desc: 'Crinkled, ruffled leaves with a fresh spearmint flavour, popular as a garnish.', img: 'curlymint.jpg' },
       { name: 'Ginger mint', desc: 'Warm, mildly spicy mint with gold-streaked leaves.', img: 'gingermint.jpg' }
+    ] }
+)
+
+PRODUCTS.push(
+  { name: 'Basil', cat: 'Herbs', desc: 'Fresh basil in several varieties for cooking, salads and sauces.', img: 'basil.jpg',
+    variants: [
+      { name: 'Sweet Aroma 2', desc: 'Large-leaf sweet basil with a rich, classic aroma.', img: 'basil.jpg' },
+      { name: 'Prospera', desc: 'Sweet basil with full, glossy leaves and a strong aroma.', img: 'basil.jpg' },
+      { name: 'Thai basil', desc: 'Spicy, anise-scented basil with purple stems, ideal for Asian cooking.', img: 'basil.jpg' },
+      { name: 'Red basil', desc: 'Deep red-purple leaves with a bold flavour, popular for garnish.', img: 'basil.jpg' }
     ] }
 )
