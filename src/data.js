@@ -49,7 +49,7 @@ export const PRODUCTS = [
     "name": "Lemongrass",
     "cat": "Botanicals",
     "desc": "Citrus-scented stalks for teas, soups and Asian cuisine.",
-    "img": ""
+    "img": "lemongrass.jpg"
   },
   {
     "name": "Lemon balm (Melissa) crushed",
