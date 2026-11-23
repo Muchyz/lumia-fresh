@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake , CheckCircle, Plus, Flower } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake , CheckCircle, Plus, Flower , Clock , User } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -341,33 +341,62 @@ export function Export() {
 }
 
 export function Contact() {
-  const [f, setF] = useState({ name: '', email: '', company: '', product: '', msg: '' })
+  const [f, setF] = useState({ name: '', email: '', phone: '', topic: 'Herbs', msg: '' })
   const set = k => e => setF({ ...f, [k]: e.target.value })
-  const submit = e => {
-    e.preventDefault()
-    const t = `Hello LUMIA FRESH,\nName: ${f.name}\nCompany: ${f.company}\nEmail: ${f.email}\nProduct: ${f.product}\n\n${f.msg}`
-    window.open(wa(t), '_blank')
-  }
+  const body = 'Hello LUMIA FRESH,\nName: ' + f.name + '\nEmail: ' + f.email + '\nPhone: ' + f.phone + '\nInterested in: ' + f.topic + '\n\n' + f.msg
+  const tel = C.phone.replace(/\s/g, '')
+  const send = e => { e.preventDefault(); window.open(wa(body), '_blank') }
+  const info = [
+    [WhatsappLogo, 'WhatsApp', 'Chat with us now', wa('Hello LUMIA FRESH, I would like a quote.'), 'wa'],
+    [Phone, 'Call us', C.phone, 'tel:' + tel, 'ph'],
+    [EnvelopeSimple, 'Email', C.email, 'mailto:' + C.email, 'em'],
+    [MapPin, 'Visit', C.location, null, 'mp'],
+  ]
   return (
     <>
-      <Head t="Contact & Enquiries" p="Request a quote or ask us anything." />
-      <section><div className="wrap split" style={{ alignItems: 'start' }}>
-        <div>
-          <h2>Let's talk</h2>
-          <div className="info"><div className="ico"><Phone size={26} weight="duotone" /></div><div><b>Phone / WhatsApp</b><br />{C.phone}</div></div>
-          <div className="info"><div className="ico"><EnvelopeSimple size={26} weight="duotone" /></div><div><b>Email</b><br />{C.email}</div></div>
-          <div className="info"><div className="ico"><MapPin size={26} weight="duotone" /></div><div><b>Location</b><br />{C.location}</div></div>
-          <a className="btn btn-wa" href={wa()} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> Chat on WhatsApp</a>
+      <section className="abhero">
+        <div className="abbg" />
+        <div className="wrap">
+          <div className="abcrumb"><Link to="/">Home</Link> <span>/</span> Contact</div>
+          <h1>Contact Us</h1>
+          <p>Tell us what you need and we will send a quote.</p>
         </div>
-        <form className="f card" onSubmit={submit}>
-          <input required placeholder="Your name" value={f.name} onChange={set('name')} />
-          <input placeholder="Company" value={f.company} onChange={set('company')} />
-          <input type="email" required placeholder="Email" value={f.email} onChange={set('email')} />
-          <select value={f.product} onChange={set('product')}><option value="">Product of interest</option>
-            {PRODUCTS.map(p => <option key={p.name}>{p.name}</option>)}</select>
-          <textarea placeholder="Volumes, destination, packaging..." value={f.msg} onChange={set('msg')} />
-          <button className="btn btn-p" type="submit"><PaperPlaneTilt size={18} weight="bold" /> Send via WhatsApp</button>
-        </form>
+      </section>
+
+      <section className="ct"><div className="wrap">
+        <div className="ctgrid">
+          {info.map(([I, t, d, href, k], i) => {
+            const inner = <><div className="cti"><I size={26} weight="duotone" /></div><div><b>{t}</b><span>{d}</span></div></>
+            return (
+              <Reveal key={t} delay={i * 70}>
+                {href
+                  ? <a className={'ctcard ' + k} href={href} target={k === 'wa' ? '_blank' : undefined} rel="noreferrer">{inner}</a>
+                  : <div className={'ctcard ' + k}>{inner}</div>}
+              </Reveal>
+            )
+          })}
+        </div>
+
+        <Reveal><form className="ctform" onSubmit={send}>
+          <span className="pill">Send an enquiry</span>
+          <h2>Request a quote</h2>
+          <p className="ctsub"><Clock size={16} weight="duotone" /> We usually reply the same day.</p>
+          <div className="ctfields">
+            <div className="fld"><User size={22} weight="duotone" /><input required value={f.name} onChange={set('name')} placeholder="Your Name" /></div>
+            <div className="fld"><EnvelopeSimple size={22} weight="duotone" /><input type="email" required value={f.email} onChange={set('email')} placeholder="Your Email" /></div>
+            <div className="fld"><Phone size={22} weight="duotone" /><input value={f.phone} onChange={set('phone')} placeholder="Your Phone / WhatsApp" /></div>
+            <div className="fld"><Leaf size={22} weight="duotone" />
+              <select value={f.topic} onChange={set('topic')}>
+                <option>Herbs</option><option>Flowers</option><option>Botanicals</option><option>Other</option>
+              </select>
+              <CaretDown className="fcaret" size={18} weight="bold" /></div>
+            <div className="fld full area"><ChatCircleDots size={22} weight="duotone" /><textarea rows="5" required value={f.msg} onChange={set('msg')} placeholder="Tell us the herbs, volumes and destination..." /></div>
+          </div>
+          <div className="ctbtns">
+            <button type="submit" className="btn btn-wa"><WhatsappLogo size={20} weight="fill" /> Send on WhatsApp</button>
+            <a className="btn btn-glass ctmail" href={'mailto:' + C.email + '?subject=Quote request&body=' + encodeURIComponent(body)}><EnvelopeSimple size={18} weight="bold" /> Send by email</a>
+          </div>
+        </form></Reveal>
       </div></section>
     </>
   )
