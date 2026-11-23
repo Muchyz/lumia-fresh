@@ -97,7 +97,7 @@ export const PRODUCTS = [
     "name": "Bay leaves",
     "cat": "Herbs",
     "desc": "Whole bay leaves for soups, stews and sauces.",
-    "img": ""
+    "img": "bayleaves.jpg"
   },
   {
     "name": "Oregano",
