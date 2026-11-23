@@ -43,7 +43,7 @@ export const PRODUCTS = [
     "name": "Moringa",
     "cat": "Botanicals",
     "desc": "Nutrient-rich moringa leaves, fresh or dried.",
-    "img": ""
+    "img": "moringa.jpg"
   },
   {
     "name": "Lemongrass",
