@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf } from '@phosphor-icons/react'
+import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf, CaretRight, ArrowUp } from '@phosphor-icons/react'
 import { C } from './data'
 
 export const wa = (t = 'Hello LUMIA FRESH, I would like to enquire about your herbs.') =>
@@ -56,23 +56,39 @@ export function Navbar() {
 }
 
 export function Footer() {
+  const tel = C.phone.replace(/\s/g, '')
+  const Col = ({ t, items }) => (
+    <div className="ftcol"><h4>{t}</h4>
+      {items.map(([to, l]) => <Link key={l} to={to}><CaretRight size={12} weight="bold" /> {l}</Link>)}
+    </div>
+  )
   return (
-    <footer className="foot">
+    <footer className="ft">
       <div className="wrap">
-        <div className="cols">
-          <div>
-            <h4 className="fb"><Leaf size={24} weight="duotone" /> {C.name}</h4>
-            <p>{C.tag}. Organic herbs grown on the Equator, exported worldwide.</p>
-          </div>
-          <div><h4>Pages</h4>{LINKS.map(([to, l]) => <Link key={to} to={to}>{l}</Link>)}</div>
-          <div><h4>Contact</h4>
-            <a href={`tel:${C.phone.replace(/\s/g, '')}`}><Phone size={18} weight="duotone" /> {C.phone}</a>
-            <a href={`mailto:${C.email}`}><EnvelopeSimple size={18} weight="duotone" /> {C.email}</a>
-            <a href={wa()} target="_blank" rel="noreferrer"><WhatsappLogo size={18} weight="duotone" /> WhatsApp us</a>
-            <span className="loc"><MapPin size={18} weight="duotone" /> {C.location}</span>
-          </div>
+        <div className="ftbrand">
+          <Link to="/" className="ftlogo"><Img src="logo.png" alt="LUMIA FRESH" /></Link>
+          <p className="fttag">{C.tag}</p>
         </div>
-        <small>© {new Date().getFullYear()} {C.name}. All rights reserved.</small>
+        <div className="ftabout">
+          <p>Certified organic herbs grown in the fertile Kenyan highlands along the Equator and exported worldwide.</p>
+          <span><MapPin size={16} weight="duotone" /> {C.location}</span>
+          <a href={`tel:${tel}`}><Phone size={16} weight="duotone" /> {C.phone}</a>
+          <a href={`mailto:${C.email}`}><EnvelopeSimple size={16} weight="duotone" /> {C.email}</a>
+        </div>
+        <div className="ftgrid">
+          <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/contact', 'Contact']]} />
+          <Col t="Products" items={[['/products', 'All Products'], ['/products', 'Herbs'], ['/products', 'Flowers'], ['/products', 'Botanicals']]} />
+          <Col t="Support" items={[['/contact', 'Contact Us'], ['/contact', 'Request a Quote'], ['/export', 'Shipping & Packaging'], ['/about', 'Our Story']]} />
+        </div>
+        <div className="ftsocial">
+          <a href={wa()} target="_blank" rel="noreferrer" aria-label="WhatsApp" className="s1"><WhatsappLogo size={24} weight="fill" /></a>
+          <a href={`tel:${tel}`} aria-label="Call" className="s2"><Phone size={24} weight="fill" /></a>
+          <a href={`mailto:${C.email}`} aria-label="Email" className="s3"><EnvelopeSimple size={24} weight="fill" /></a>
+        </div>
+        <div className="ftbar">
+          <small>© {new Date().getFullYear()} {C.name}. All rights reserved.</small>
+          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Back to top"><ArrowUp size={18} weight="bold" /> Top</button>
+        </div>
       </div>
     </footer>
   )
