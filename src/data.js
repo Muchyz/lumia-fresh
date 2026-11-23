@@ -94,12 +94,6 @@ export const PRODUCTS = [
     "img": "cilantro.jpg"
   },
   {
-    "name": "Bay leaves",
-    "cat": "Herbs",
-    "desc": "Whole bay leaves for soups, stews and sauces.",
-    "img": "bayleaves.jpg"
-  },
-  {
     "name": "Thyme",
     "cat": "Herbs",
     "desc": "Aromatic thyme sprigs for roasts and sauces.",
