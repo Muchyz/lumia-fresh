@@ -109,7 +109,7 @@ export const PRODUCTS = [
     "name": "Thyme",
     "cat": "Herbs",
     "desc": "Aromatic thyme sprigs for roasts and sauces.",
-    "img": ""
+    "img": "thyme.jpg"
   },
   {
     "name": "Rosemary",
