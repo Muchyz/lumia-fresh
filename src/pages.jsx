@@ -188,9 +188,9 @@ export function Products() {
   const list = PRODUCTS.filter(p => (cat === 'All' || p.cat === cat) && p.name.toLowerCase().includes(q.toLowerCase()))
   return (
     <>
-      <Head t="Our Products" p="Leaves, flowers and botanicals for export." bg="hero.jpg" />
+      <Head t="Our Products" p="Herbs, vegetables, flowers and fruits for export." bg="hero.jpg" />
       <section><div className="wrap">
-        <div className="search"><MagnifyingGlass size={20} weight="duotone" /><input placeholder="Search herbs..." value={q} onChange={e => setQ(e.target.value)} /></div>
+        <div className="search"><MagnifyingGlass size={20} weight="duotone" /><input placeholder="Search products..." value={q} onChange={e => setQ(e.target.value)} /></div>
         <div className="chips">{cats.map(c => <button key={c} className={'chip' + (c === cat ? ' on' : '')} onClick={() => setCat(c)}>{c}</button>)}</div>
         <div className="grid">{list.map((p, i) => <ProductCard key={p.name} p={p} i={i} />)}</div>
         {!list.length && <p className="lead" style={{ marginTop: 30 }}>No products found.</p>}
