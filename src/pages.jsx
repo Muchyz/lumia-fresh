@@ -180,6 +180,7 @@ export function Products() {
 }
 
 export function Export() {
+  const [fq, setFq] = useState('All')
   const cats = [['Herbs', Leaf, 'Fresh culinary herbs'], ['Flowers', Flower, 'Teas and infusions'], ['Botanicals', Plant, 'Leaves and grasses']]
   const facts = [
     [Handshake, 'Wholesale & bulk', 'Volumes for importers and distributors'],
@@ -207,12 +208,22 @@ export function Export() {
     ['Harvest & pack', 'Cut fresh, graded and packed for export.', Package],
     ['Ship worldwide', 'Air or sea freight with the right paperwork.', Airplane],
   ]
+  const fcats = ['All', 'Ordering', 'Products', 'Shipping', 'Documents']
   const faqs = [
-    ['What is the minimum order?', 'It depends on the product and destination. Send us your target volume and we will confirm what is possible.'],
-    ['Can I get samples before ordering?', 'Ask us on WhatsApp or by email and we will arrange sample options with you.'],
-    ['Do you supply fresh or dried herbs?', 'Both. The form depends on the herb, so tell us what you need and we will advise.'],
-    ['Which shipping terms do you work with?', 'Common terms such as FOB and CIF are available, depending on your port and requirements.'],
-    ['Can you grow a specific variety for me?', 'Yes. Contract farming lets us grow to your quality specifications, volumes and delivery schedule.'],
+    ['Ordering', "What is your minimum order quantity?", "It depends on the product, its form (fresh, dried or crushed) and your destination. Send us your target volume and we will confirm what is possible."],
+    ['Ordering', "How do I request a quote?", "Message us on WhatsApp, call, or use the contact form. Tell us the herbs, volumes, destination and when you need delivery, and we will reply with a quote."],
+    ['Ordering', "Can I order several herbs in one shipment?", "Mixed orders can be discussed. List the herbs and quantities you need and we will advise on the best way to pack and ship them."],
+    ['Ordering', "Can I get samples before placing a bulk order?", "Ask us on WhatsApp or by email and we will arrange sample options and specifications with you."],
+    ['Products', "Do you supply fresh or dried herbs?", "Both. The form depends on the herb, so tell us what you need and we will advise what we can supply."],
+    ['Products', "Are your herbs organically grown?", "Our herbs are grown organically in the Kenyan equatorial highlands. Ask us for the current certification documents that apply to your market."],
+    ['Products', "Can you grow a specific variety for me?", "Yes. Contract farming lets us grow to your quality specifications, volumes and delivery schedule."],
+    ['Products', "Is supply available all year round?", "Our equatorial climate allows continuous, all-season production, so we can plan regular supply with you instead of seasonal batches."],
+    ['Shipping', "Which shipping terms do you work with?", "Common terms such as FOB and CIF are available, depending on your port and requirements."],
+    ['Shipping', "How are fresh and dried products shipped?", "Fresh herbs normally travel by air to protect aroma and shelf life. Dried leaves and flowers can go by sea in larger volumes at lower cost."],
+    ['Shipping', "How are the products packed?", "In ventilated export cartons marked Produce of Kenya. Custom packing sizes and labelling can be discussed on request."],
+    ['Documents', "Which export documents can you provide?", "Export and certification documents are available on request. Tell us what your import authority requires and we will confirm what we can supply."],
+    ['Documents', "What are your payment terms?", "Payment terms are agreed with each buyer when the order is confirmed."],
+    ['Documents', "Can you meet the import requirements of my country?", "Requirements differ by market. Share your destination and we will go through them with you before you commit to an order."],
   ]
   return (
     <>
@@ -292,10 +303,23 @@ export function Export() {
           <Reveal key={t} delay={i * 120}><div className="tstep"><div className="tdot"><I size={28} weight="duotone" /><span>{i + 1}</span></div><div className="tbody"><h3>{t}</h3><p>{d}</p></div></div></Reveal>))}</div>
       </div></section>
 
-      <section><div className="wrap exfaq">
-        <div className="center"><span className="pill">FAQ</span><h2>Common questions</h2></div>
-        <div className="exqs">{faqs.map(([q, a]) => (
-          <details key={q}><summary>{q}<Plus size={20} weight="bold" /></summary><p>{a}</p></details>))}</div>
+      <section className="exfaq2"><div className="wrap faqwrap">
+        <div className="faqside">
+          <span className="pill">FAQ</span>
+          <h2>Frequently asked questions</h2>
+          <p className="lead">The questions importers ask most before placing a bulk order.</p>
+          <div className="faqhelp">
+            <div className="ico"><ChatCircleDots size={28} weight="duotone" /></div>
+            <h3>Still have a question?</h3>
+            <p>Our team will answer you directly on WhatsApp.</p>
+            <a className="btn btn-wa" href={wa('Hello LUMIA FRESH, I have a question about exporting.')} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> Ask us</a>
+          </div>
+        </div>
+        <div className="faqmain">
+          <div className="chips faqtabs">{fcats.map(c => <button key={c} className={'chip' + (c === fq ? ' on' : '')} onClick={() => setFq(c)}>{c}</button>)}</div>
+          <div className="exqs">{faqs.filter(f => fq === 'All' || f[0] === fq).map(([c, q, a], i) => (
+            <details key={q}><summary><span className="qn">{String(i + 1).padStart(2, '0')}</span><span className="qt">{q}</span><Plus size={20} weight="bold" /></summary><p>{a}</p></details>))}</div>
+        </div>
       </div></section>
 
       <section><div className="wrap"><div className="cta">
