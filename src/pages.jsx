@@ -201,7 +201,7 @@ export function Products() {
 
 export function Export() {
   const [fq, setFq] = useState('All')
-  const cats = [['Herbs', Leaf, 'Fresh culinary herbs'], ['Flowers', Flower, 'Teas and infusions'], ['Botanicals', Plant, 'Leaves and grasses']]
+  const cats = [['Herbs', Leaf, 'Fresh culinary herbs'], ['Flowers', Flower, 'Teas and infusions'], ['Vegetables', Plant, 'Fresh farm vegetables'], ['Fruits', Leaf, 'Highland and tropical fruits']]
   const facts = [
     [Handshake, 'Wholesale & bulk', 'Volumes for importers and distributors'],
     [Plant, 'Contract farming', 'Grown to your specification'],
@@ -278,10 +278,10 @@ export function Export() {
 
       <section className="alt expro"><div className="wrap">
         <div className="center"><span className="pill">What we export</span><h2>Our product range</h2>
-          <p className="lead">{PRODUCTS.length} products across three categories.</p></div>
+          <p className="lead">{PRODUCTS.length} products across four categories.</p></div>
         <div className="excats">
           {cats.map(([c, I, d], i) => (
-            <Reveal key={c} delay={i * 90}><Link to={'/products?cat=' + c} className="excat" style={{ backgroundImage: `linear-gradient(180deg,#06281a10,#06281af0),url(/images/${{ Herbs: 'cilantro.jpg', Flowers: 'calendula.jpg', Botanicals: 'moringa.jpg' }[c]})` }}>
+            <Reveal key={c} delay={i * 90}><Link to={'/products?cat=' + c} className="excat" style={{ backgroundImage: `linear-gradient(180deg,#06281a10,#06281af0),url(/images/${{ Herbs: 'cilantro.jpg', Flowers: 'calendula.jpg', Vegetables: 'kale.jpg', Fruits: 'avocado.jpg' }[c]})` }}>
               <span className="exnum">{PRODUCTS.filter(p => p.cat === c).length}</span>
               <div className="ico"><I size={28} weight="duotone" /></div>
               <h3>{c}</h3><p>{d}</p>
@@ -400,7 +400,7 @@ export function Contact() {
             <div className="fld"><Phone size={22} weight="duotone" /><input value={f.phone} onChange={set('phone')} placeholder="Your Phone / WhatsApp" /></div>
             <div className="fld"><Leaf size={22} weight="duotone" />
               <select value={f.topic} onChange={set('topic')}>
-                <option>Herbs</option><option>Flowers</option><option>Botanicals</option><option>Other</option>
+                <option>Herbs</option><option>Flowers</option><option>Vegetables</option><option>Fruits</option><option>Other</option>
               </select>
               <CaretDown className="fcaret" size={18} weight="bold" /></div>
             <div className="fld full area"><ChatCircleDots size={22} weight="duotone" /><textarea rows="5" required value={f.msg} onChange={set('msg')} placeholder="Tell us the herbs, volumes and destination..." /></div>

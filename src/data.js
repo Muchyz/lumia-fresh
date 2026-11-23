@@ -41,19 +41,19 @@ export const PRODUCTS = [
   },
   {
     "name": "Moringa",
-    "cat": "Botanicals",
+    "cat": "Herbs",
     "desc": "Nutrient-rich moringa leaves, fresh or dried.",
     "img": "moringa.jpg"
   },
   {
     "name": "Lemongrass",
-    "cat": "Botanicals",
+    "cat": "Herbs",
     "desc": "Citrus-scented stalks for teas, soups and Asian cuisine.",
     "img": "lemongrass.jpg"
   },
   {
     "name": "Lemon balm (Melissa) crushed",
-    "cat": "Botanicals",
+    "cat": "Herbs",
     "desc": "Crushed lemon balm for herbal teas and blends.",
     "img": "lemonbalm.jpg"
   },
@@ -133,7 +133,7 @@ export const PRODUCTS = [
 
 PRODUCTS.push(
   { name: 'French beans', cat: 'Vegetables', desc: 'Tender, hand-picked fine beans for export markets.', img: 'frenchbeans.jpg' },
-  { name: 'Snow peas', cat: 'Vegetables', desc: 'Crisp, sweet pods packed fresh for retail and foodservice.', img: 'snowpeas.jpg' },
+  { name: 'Garden peas', cat: 'Vegetables', desc: 'Sweet, tender green peas packed fresh for retail and foodservice.', img: 'snowpeas.jpg' },
   { name: 'Kale', cat: 'Vegetables', desc: 'Nutrient-rich leafy greens grown in volcanic highland soils.', img: 'kale.jpg' },
   { name: 'Chillies', cat: 'Vegetables', desc: 'Fresh chillies with bright colour and consistent heat.', img: 'chillies.jpg' },
   { name: 'Avocados', cat: 'Fruits', desc: 'Creamy highland avocados, picked and graded for export.', img: 'avocado.jpg' },
