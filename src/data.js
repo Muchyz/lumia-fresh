@@ -126,6 +126,9 @@ PRODUCTS.push(
   { name: 'Mint', cat: 'Herbs', desc: 'Fresh mint in several varieties for drinks, teas, confectionery and cooking.', img: 'mint.jpg',
     variants: [
       { name: 'Spearmint', desc: 'Fresh, cool and sweet mint for drinks and cooking.', img: 'spearmint.jpg' },
-      { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'peppermint.jpg' }
+      { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'peppermint.jpg' },
+      { name: 'Apple mint', desc: 'Soft leaves with a fruity, gentle aroma.', img: 'applemint.jpg' },
+      { name: 'Chocolate mint', desc: 'Peppermint type with a cocoa-like note for desserts and drinks.', img: 'chocolatemint.jpg' },
+      { name: 'Curly mint', desc: 'Crinkled, ruffled leaves with a fresh spearmint flavour, popular as a garnish.', img: 'curlymint.jpg' }
     ] }
 )
