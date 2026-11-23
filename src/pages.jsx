@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake , CheckCircle, Plus, Flower } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -180,24 +180,105 @@ export function Products() {
 }
 
 export function Export() {
-  const items = [
-    [Airplane, 'Air freight', 'Fresh herbs shipped by air to preserve quality and shelf life.'],
-    [Boat, 'Sea freight', 'Dried leaves and flowers shipped in bulk by sea.'],
-    [Package, 'Packaging', 'Ventilated export cartons marked Produce of Kenya. Custom packing on request.'],
-    [Certificate, 'Documents', 'Export paperwork and certification documents available on request.'],
+  const cats = [['Herbs', Leaf, 'Fresh culinary herbs'], ['Flowers', Flower, 'Teas and infusions'], ['Botanicals', Plant, 'Leaves and grasses']]
+  const facts = [
+    [Handshake, 'Wholesale & bulk', 'Volumes for importers and distributors'],
+    [Plant, 'Contract farming', 'Grown to your specification'],
+    [Package, 'Export packing', 'Ventilated cartons, Produce of Kenya'],
+    [GlobeHemisphereWest, 'Worldwide', 'Air and sea freight'],
+  ]
+  const checks = ['Wholesale and bulk quantities', 'Fresh and dried products', 'Year-round supply from equatorial farms', 'Contract farming for specific varieties']
+  const ship = [
+    [Airplane, 'Air freight', 'Best for fresh herbs. Fast transit protects aroma, colour and shelf life.'],
+    [Boat, 'Sea freight', 'Best for dried leaves and flowers shipped in larger volumes at lower cost.'],
+  ]
+  const terms = [
+    ['Order type', 'Wholesale, bulk and contract farming'],
+    ['Product form', 'Fresh, dried or crushed, depending on the herb'],
+    ['Packaging', 'Ventilated export cartons marked Produce of Kenya'],
+    ['Trade terms', 'FOB, CIF and others, depending on your destination'],
+    ['Minimum order', 'On request, depending on the product'],
+    ['Payment terms', 'Agreed with each buyer'],
+    ['Documents', 'Export and certification documents on request'],
+  ]
+  const steps = [
+    ['Send an enquiry', 'Tell us the herbs, volumes and destination.', ChatCircleDots],
+    ['Quote & samples', 'We share pricing, specifications and samples.', FileText],
+    ['Harvest & pack', 'Cut fresh, graded and packed for export.', Package],
+    ['Ship worldwide', 'Air or sea freight with the right paperwork.', Airplane],
+  ]
+  const faqs = [
+    ['What is the minimum order?', 'It depends on the product and destination. Send us your target volume and we will confirm what is possible.'],
+    ['Can I get samples before ordering?', 'Ask us on WhatsApp or by email and we will arrange sample options with you.'],
+    ['Do you supply fresh or dried herbs?', 'Both. The form depends on the herb, so tell us what you need and we will advise.'],
+    ['Which shipping terms do you work with?', 'Common terms such as FOB and CIF are available, depending on your port and requirements.'],
+    ['Can you grow a specific variety for me?', 'Yes. Contract farming lets us grow to your quality specifications, volumes and delivery schedule.'],
   ]
   return (
     <>
-      <Head t="Export & Wholesale" p="Flexible supply for importers, wholesalers and distributors." />
+      <Head t="Export & Wholesale" p="Flexible supply for importers, wholesalers and distributors." bg="greenhouse.jpg" />
+
+      <div className="wrap"><div className="exfacts">
+        {facts.map(([I, t, d], i) => (
+          <Reveal key={t} delay={i * 80}><div className="exfact"><div className="ico"><I size={28} weight="duotone" /></div><h3>{t}</h3><p>{d}</p></div></Reveal>))}
+      </div></div>
+
       <section><div className="wrap split">
-        <Reveal><div><p className="eyebrow">Trade information</p><h2>Wholesale and bulk orders</h2>
-          <p className="lead">We supply both wholesale and bulk quantities, with contract farming available for buyers who need specific varieties year-round. Trade terms such as FOB and CIF are available depending on your destination.</p>
-          <div className="row"><a className="btn btn-wa" href={wa('Hello LUMIA FRESH, I would like export pricing.')} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> Get export pricing</a></div></div></Reveal>
-        <Reveal delay={120}><Img src="boxes.jpg" alt="Export cartons" /></Reveal>
+        <Reveal><div>
+          <span className="pill">Trade information</span>
+          <h2>Wholesale and bulk orders</h2>
+          <p className="lead">We supply importers, wholesalers and distributors, with contract farming for buyers who need specific varieties all year round.</p>
+          <ul className="exchecks">{checks.map(c => <li key={c}><CheckCircle size={22} weight="fill" /> {c}</li>)}</ul>
+          <div className="row"><a className="btn btn-wa" href={wa('Hello LUMIA FRESH, I would like export pricing.')} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> Get export pricing</a></div>
+        </div></Reveal>
+        <Reveal delay={120}><div className="imgwrap"><Img src="harvest.jpg" alt="Harvesting herbs" />
+          <div className="float"><Plant size={28} weight="duotone" /><div><b>Farm fresh</b><span>Equatorial highlands</span></div></div></div></Reveal>
       </div></section>
-      <section className="alt"><div className="wrap"><div className="grid">
-        {items.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}
-      </div></div></section>
+
+      <section className="alt expro"><div className="wrap">
+        <div className="center"><span className="pill">What we export</span><h2>Our product range</h2>
+          <p className="lead">{PRODUCTS.length} products across three categories.</p></div>
+        <div className="excats">
+          {cats.map(([c, I, d], i) => (
+            <Reveal key={c} delay={i * 90}><Link to={'/products?cat=' + c} className="excat">
+              <div className="ico"><I size={30} weight="duotone" /></div>
+              <div><h3>{c}</h3><p>{d}</p></div>
+              <span className="exnum">{PRODUCTS.filter(p => p.cat === c).length}</span>
+            </Link></Reveal>))}
+        </div>
+      </div></section>
+
+      <section><div className="wrap">
+        <div className="center"><span className="pill">Shipping</span><h2>Air and sea freight</h2></div>
+        <div className="grid">{ship.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div>
+      </div></section>
+
+      <section className="dark exterms"><div className="wrap">
+        <div className="center"><span className="pill pl">Trade terms</span><h2>At a glance</h2></div>
+        <Reveal><div className="extable">
+          {terms.map(([a, b]) => <div key={a} className="exrow"><b>{a}</b><span>{b}</span></div>)}
+        </div></Reveal>
+      </div></section>
+
+      <section className="alt process"><div className="wrap">
+        <div className="center"><span className="pill">How to order</span><h2>From enquiry to delivery</h2></div>
+        <div className="tl">{steps.map(([t, d, I], i) => (
+          <Reveal key={t} delay={i * 120}><div className="tstep"><div className="tdot"><I size={28} weight="duotone" /><span>{i + 1}</span></div><div className="tbody"><h3>{t}</h3><p>{d}</p></div></div></Reveal>))}</div>
+      </div></section>
+
+      <section><div className="wrap exfaq">
+        <div className="center"><span className="pill">FAQ</span><h2>Common questions</h2></div>
+        <div className="exqs">{faqs.map(([q, a]) => (
+          <details key={q}><summary>{q}<Plus size={20} weight="bold" /></summary><p>{a}</p></details>))}</div>
+      </div></section>
+
+      <section><div className="wrap"><div className="cta">
+        <h2>Ready to place an order?</h2>
+        <p>Send us your herbs, volumes and destination and we will reply with a quote.</p>
+        <div className="row" style={{ justifyContent: 'center' }}>
+          <a className="btn btn-wa" href={wa('Hello LUMIA FRESH, I would like to place an export order.')} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> WhatsApp us</a>
+          <Link to="/contact" className="btn btn-glass">Request a quote <PaperPlaneTilt size={18} weight="bold" /></Link>
+        </div></div></div></section>
     </>
   )
 }
