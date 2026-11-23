@@ -794,3 +794,24 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 .marquee:hover .track,.marquee:active .track{animation-play-state:paused}
 @media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
 @media(min-width:861px){.marquee{padding:24px 0}.marquee:before,.marquee:after{width:140px}.marquee .track>*{padding:12px 26px;font-size:1.08rem}}
+/* ---- Marquee strip: modern editorial ---- */
+.marquee{padding:26px 0;background:
+ radial-gradient(500px 140px at 15% 0%,#c6ee5a22,transparent 70%),
+ radial-gradient(500px 140px at 85% 100%,#1a9a5540,transparent 70%),
+ linear-gradient(180deg,#083322,#04200f);
+ border:0;position:relative}
+.marquee:before,.marquee:after{width:90px}
+.marquee:before{background:linear-gradient(90deg,#04200f,transparent)}
+.marquee:after{background:linear-gradient(270deg,#04200f,transparent)}
+.marquee .track{animation-duration:30s}
+.marquee .track>*{padding:0;margin-right:34px;gap:34px;border:0;border-radius:0;background:none;box-shadow:none;
+ font-family:'Fraunces',Georgia,serif;font-style:italic;font-weight:600;font-size:1.55rem;letter-spacing:-.01em;color:#f3fbe2;text-shadow:0 2px 18px #0006}
+.marquee .track>* svg{width:26px;height:26px;color:var(--lime);filter:drop-shadow(0 0 10px #c6ee5acc);order:2}
+.marquee .track>*:nth-child(3n+1){color:var(--lime)}
+.marquee .track>*:hover{color:#fff}
+@media(min-width:861px){
+ .marquee{padding:34px 0}
+ .marquee:before,.marquee:after{width:200px}
+ .marquee .track>*{font-size:2.1rem;margin-right:48px;gap:48px}
+ .marquee .track>* svg{width:32px;height:32px}
+}
