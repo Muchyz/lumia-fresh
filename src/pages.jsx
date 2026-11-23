@@ -57,21 +57,21 @@ export function Home() {
   const names = [...PRODUCTS, ...PRODUCTS]
   return (
     <>
-      <section className="hero" id="home">
-        <Img src="cilantro.jpg" alt="Herb fields" />
+      <section className="hh">
+        <div className="hhbg" />
         <div className="wrap">
-          <span className="badge"><Leaf size={18} weight="duotone" /> {C.tag}</span>
+          <span className="hhbadge"><Leaf size={16} weight="duotone" /> Equatorial Highlands Organics</span>
           <h1>Fresh organic herbs from the <em>heart of the Equator</em></h1>
           <p>Premium herbs grown in Kenya's fertile highlands and supplied to importers, wholesalers and distributors worldwide.</p>
-          <div className="row">
+          <div className="hhbtns">
             <Link to="/products" className="btn btn-lime">View Products <ArrowRight size={18} weight="bold" /></Link>
-            <a href={wa()} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
+            <a href={wa('Hello LUMIA FRESH, I would like a quote.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
           </div>
-          <div className="hchips">
-            {[[SealCheck, 'Organic grown'], [CalendarCheck, 'Year-round'], [Airplane, 'Export-ready']].map(([I, t]) => (
-              <span key={t}><I size={18} weight="duotone" /> {t}</span>))}
+          <div className="hhchips">
+            <span><MapPin size={16} weight="duotone" /> Kenyan highlands</span>
+            <span><Plant size={16} weight="duotone" /> Contract farming</span>
+            <span><Airplane size={16} weight="duotone" /> Air &amp; sea freight</span>
           </div>
-          <a href="#about" className="scroll" aria-label="Scroll down"><CaretDown size={22} weight="bold" /></a>
         </div>
       </section>
 

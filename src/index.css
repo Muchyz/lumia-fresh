@@ -661,3 +661,26 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 .ctgrid>.rv{align-items:stretch}
 .ctcard{min-height:96px}
 .ctcard .cti,.ctcard.wa .cti,.ctcard.cph .cti,.ctcard.em .cti,.ctcard.mp .cti{background:linear-gradient(135deg,#1a9a55,#0b3d2a);box-shadow:0 10px 22px #1a9a5545}
+/* ---- Home hero ---- */
+.hh{position:relative;overflow:hidden;color:#fff;display:flex;align-items:center;min-height:calc(100svh - 96px);padding:44px 0 40px;background:#06281a}
+.hhbg{position:absolute;inset:0;background:
+ radial-gradient(420px 260px at 100% 0%,#c6ee5a2e,transparent 70%),
+ linear-gradient(180deg,#06281ab8 0%,#06281a80 40%,#06281af2 100%),
+ url(/images/cilantro.jpg) center/cover;transform:scale(1.04)}
+.hh .wrap{position:relative;z-index:1}
+.hhbadge{display:inline-flex;align-items:center;gap:8px;background:#c6ee5a22;border:1px solid #c6ee5a66;color:var(--lime);backdrop-filter:blur(8px);font-size:.72rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:20px}
+.hh h1{color:#fff;font-size:clamp(2.1rem,9vw,4rem);line-height:1.08;max-width:760px;margin:0}
+.hh h1 em{display:block;font-style:italic;color:var(--lime)}
+.hh p{margin-top:16px;max-width:520px;font-size:1.02rem;line-height:1.6;opacity:.92}
+.hhbtns{display:flex;gap:10px;margin-top:26px}
+.hhbtns .btn{flex:1 1 0;justify-content:center;padding:15px 12px;font-size:.95rem;white-space:nowrap}
+.hhbtns .btn-lime{box-shadow:0 10px 26px #c6ee5a55}
+.hhbtns .btn-glass{background:#ffffff14;border:1.5px solid #ffffff55;backdrop-filter:blur(8px)}
+.hhchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px;padding-top:20px;border-top:1px solid #ffffff22}
+.hhchips span{display:inline-flex;align-items:center;gap:6px;background:#ffffff14;border:1px solid #ffffff2e;backdrop-filter:blur(8px);border-radius:999px;padding:8px 13px;font-size:.78rem;font-weight:700}
+.hhchips svg{color:var(--lime)}
+@media(min-width:700px){
+ .hh{padding:80px 0 70px}
+ .hhbtns .btn{flex:0 0 auto;padding:16px 28px}
+ .hhchips span{font-size:.85rem;padding:9px 16px}
+}
