@@ -526,3 +526,31 @@ html,body{max-width:100%;overflow-x:clip}
  .faqhelp p{margin:0 0 20px}
  .faqhelp .btn{width:auto}
 }
+/* ---- Export hero + facts glow-up ---- */
+.exhero{padding:52px 0 100px}
+.exhero .exbg{background:
+ radial-gradient(360px 240px at 100% 0%,#c6ee5a30,transparent 70%),
+ linear-gradient(180deg,#06281af0,#0b3d2ac4 55%,#06281af5),
+ url(/images/greenhouse.jpg) center/cover}
+.exbadge{display:inline-flex;align-items:center;gap:8px;background:#c6ee5a22;border:1px solid #c6ee5a66;color:var(--lime);font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:999px;margin-bottom:18px}
+.exhero h1{font-size:clamp(2rem,8vw,3.4rem);line-height:1.12;max-width:700px}
+.exhero h1 em{font-style:italic;color:var(--lime)}
+.exhero p{margin-top:12px;font-size:1.02rem;max-width:480px}
+.exbtns{display:grid;gap:12px;margin-top:24px;max-width:420px}
+.exbtns .btn{width:100%;justify-content:center;padding:16px 22px}
+.exbtns .btn-lime{box-shadow:0 10px 26px #c6ee5a55}
+.exbtns .btn-glass{background:#ffffff14;border:1.5px solid #ffffff55;backdrop-filter:blur(8px)}
+.exchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.exchips span{display:inline-flex;align-items:center;gap:6px;background:#ffffff14;border:1px solid #ffffff30;backdrop-filter:blur(8px);border-radius:999px;padding:8px 14px;font-size:.8rem;font-weight:700;color:#fff}
+.exchips svg{color:var(--lime)}
+.exfacts{margin-top:-56px;gap:12px}
+.exfact{padding:18px 12px 16px;border-radius:22px;background:linear-gradient(180deg,#fff,#f3faf5);box-shadow:0 16px 36px #0b3d2a26}
+.exfact .ico{width:46px;height:46px;border-radius:14px;margin:0 auto 10px}
+.exfact .ico svg{width:24px;height:24px}
+.exfact h3{font-size:.92rem;line-height:1.25}
+.exfact p{font-size:.76rem}
+@media(min-width:700px){
+ .exhero{padding:76px 0 120px}
+ .exbtns{grid-template-columns:1fr 1fr;max-width:480px}
+ .exfacts{margin-top:-64px}
+}
