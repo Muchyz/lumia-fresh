@@ -859,3 +859,13 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 .tm-who strong { display: block; color: #fff; line-height: 1.3; }
 .tm-tick { display: inline-block; width: 18px; height: 18px; vertical-align: -3px; margin-left: 6px; }
 .prodsec{padding-top:24px!important}
+.vbtn{background:none;border:0;padding:0;cursor:pointer;font:inherit}
+.vmodal{position:fixed;inset:0;z-index:9999;background:rgba(3,20,10,.72);display:flex;align-items:center;justify-content:center;padding:18px}
+.vbox{position:relative;background:#fff;color:var(--ink);border-radius:18px;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;padding:26px 22px}
+.vbox h3{margin:0 0 16px;font-size:1.4rem}
+.vclose{position:absolute;top:10px;right:14px;background:none;border:0;font-size:2rem;line-height:1;cursor:pointer;color:var(--g2)}
+.vlist{display:grid;gap:14px}
+.vitem{display:flex;gap:14px;align-items:center;border:1.5px solid #cfe0d5;border-radius:14px;padding:12px}
+.vitem h4{margin:0 0 4px}
+.vitem p{margin:0 0 6px;font-size:.92rem}
+.vimg{flex:none;width:84px;height:84px;object-fit:cover;border-radius:12px}

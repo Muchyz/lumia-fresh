@@ -76,18 +76,6 @@ export const PRODUCTS = [
     "img": "marjoram.jpg"
   },
   {
-    "name": "Spearmint",
-    "cat": "Herbs",
-    "desc": "Fresh, cool and sweet mint for drinks and cooking.",
-    "img": "mint.jpg"
-  },
-  {
-    "name": "Peppermint",
-    "cat": "Herbs",
-    "desc": "Strong menthol aroma for teas, confectionery and cooking.",
-    "img": "mint.jpg"
-  },
-  {
     "name": "Coriander (Cilantro)",
     "cat": "Herbs",
     "desc": "Fresh coriander leaf from our open highland fields.",
@@ -132,4 +120,12 @@ PRODUCTS.push(
 
 PRODUCTS.push(
   { name: 'Oregano', cat: 'Herbs', desc: 'Fresh, robust oregano with a peppery aroma for Mediterranean dishes.', img: 'oregano.jpg' }
+)
+
+PRODUCTS.push(
+  { name: 'Mint', cat: 'Herbs', desc: 'Fresh mint in several varieties for drinks, teas, confectionery and cooking.', img: 'mint.jpg',
+    variants: [
+      { name: 'Spearmint', desc: 'Fresh, cool and sweet mint for drinks and cooking.', img: 'mint.jpg' },
+      { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'mint.jpg' }
+    ] }
 )

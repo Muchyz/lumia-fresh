@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom'
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
@@ -13,16 +14,44 @@ const IconCard = ({ I, t, d, i = 0 }) => (
 )
 
 function ProductCard({ p, i = 0 }) {
+  const [open, setOpen] = useState(false)
+  const has = Array.isArray(p.variants)
   return (
     <Reveal delay={(i % 3) * 90}>
       <div className="card pc">
         <div className="media"><Img src={p.img} alt={p.name} className="pimg" /><span className="tag">{p.cat}</span></div>
         <div className="pad">
           <h3>{p.name}</h3><p>{p.desc}</p>
-          <a className="link" target="_blank" rel="noreferrer" href={wa(`Hello LUMIA FRESH, I would like a quote for ${p.name}.`)}>
-            Request quote <ArrowRight size={18} weight="bold" /></a>
+          {has ? (
+            <button type="button" className="link vbtn" onClick={() => setOpen(true)}>
+              View varieties <ArrowRight size={18} weight="bold" /></button>
+          ) : (
+            <a className="link" target="_blank" rel="noreferrer" href={wa(`Hello LUMIA FRESH, I would like a quote for ${p.name}.`)}>
+              Request quote <ArrowRight size={18} weight="bold" /></a>
+          )}
         </div>
       </div>
+      {has && open && createPortal(
+        <div className="vmodal" onClick={() => setOpen(false)}>
+          <div className="vbox" onClick={e => e.stopPropagation()}>
+            <button type="button" className="vclose" aria-label="Close" onClick={() => setOpen(false)}>×</button>
+            <h3>{p.name} varieties</h3>
+            <div className="vlist">
+              {p.variants.map(v => (
+                <div className="vitem" key={v.name}>
+                  <Img src={v.img || p.img} alt={v.name} className="vimg" />
+                  <div>
+                    <h4>{v.name}</h4><p>{v.desc}</p>
+                    <a className="link" target="_blank" rel="noreferrer" href={wa(`Hello LUMIA FRESH, I would like a quote for ${v.name}.`)}>
+                      Request quote <ArrowRight size={18} weight="bold" /></a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>,
+        document.body
+      )}
     </Reveal>
   )
 }
