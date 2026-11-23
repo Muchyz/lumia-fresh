@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -32,6 +32,10 @@ const WHY = [
   [Plant, 'Organic farming', 'Grown sustainably in rich volcanic soils, without harsh chemicals.'],
   [MapTrifold, 'Traceable origin', 'Authentic Kenyan produce, committed to Geographical Indication standards.'],
   [Package, 'Export-ready packing', 'Ventilated cartons marked Produce of Kenya, packed for freshness.'],
+  [Drop, 'Drip-irrigated crops', 'Efficient drip irrigation keeps plants healthy and water use low.'],
+  [Snowflake, 'Harvested fresh', 'Cut, graded and packed quickly to protect aroma and shelf life.'],
+  [Users, 'Flexible volumes', 'From wholesale to bulk orders, with contract farming for specific needs.'],
+  [Headset, 'Direct, fast support', 'Talk to us on WhatsApp, phone or email and get your quote quickly.'],
 ]
 const OFFERS = [
   [Handshake, 'Dedicated Contract Farming', 'Secure a reliable year-round supply. We grow specific varieties to your quality specs, volumes and delivery schedules.'],
