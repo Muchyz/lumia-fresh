@@ -37,6 +37,20 @@ const MENU = [
   { to: '/contact', label: 'Contact' },
 ]
 
+function ScrollTop() {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const f = () => setShow(window.scrollY > 500)
+    f(); window.addEventListener('scroll', f, { passive: true })
+    return () => window.removeEventListener('scroll', f)
+  }, [])
+  return (
+    <button className={'totop' + (show ? ' on' : '')} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Scroll to top">
+      <ArrowUp size={22} weight="bold" />
+    </button>
+  )
+}
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [sc, setSc] = useState(false)
@@ -91,6 +105,7 @@ export function Navbar() {
             Request a Quote <ArrowRight size={18} weight="bold" /></a>
         </div>
       </aside>
+      <ScrollTop />
     </>
   )
 }

@@ -770,3 +770,9 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
  .hh{padding:80px 0 70px}
  .hhbadge{font-size:.72rem;letter-spacing:.14em;padding:8px 16px}
 }
+/* ---- Scroll to top button ---- */
+.totop{position:fixed;right:22px;bottom:104px;z-index:70;width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:1px solid #ffffff40;cursor:pointer;color:var(--lime);background:linear-gradient(145deg,#0b3d2a,#06281a);box-shadow:0 10px 24px #0b3d2a66;opacity:0;transform:translateY(16px) scale(.9);pointer-events:none;transition:opacity .3s,transform .3s,background .2s}
+.totop.on{opacity:1;transform:none;pointer-events:auto}
+.totop:hover{background:var(--lime);color:var(--g0)}
+.totop:active{transform:scale(.94)}
+@media(min-width:861px){.totop{right:28px;bottom:112px}}
