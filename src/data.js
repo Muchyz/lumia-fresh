@@ -18,7 +18,7 @@ export const PRODUCTS = [
   {
     "name": "Basil",
     "cat": "Herbs",
-    "desc": "Sweet basil with large aromatic leaves, grown under protection.",
+    "desc": "Fresh basil in several varieties: Sweet Aroma 2, Prospera, Thai Basil and Red Basil.",
     "img": "basil.jpg"
   },
   {
