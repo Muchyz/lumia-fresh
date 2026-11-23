@@ -506,3 +506,23 @@ html,body{max-width:100%;overflow-x:clip}
  .ofcta p{margin:0}
  .ofcta .btn{width:auto}
 }
+/* ---- FAQ help card glow-up ---- */
+.faqhelp{text-align:center;border-radius:30px;padding:36px 24px 28px;border:1px solid #ffffff26;
+ background:
+  radial-gradient(300px 200px at 100% 0%,#c6ee5a38,transparent 70%),
+  radial-gradient(280px 200px at 0% 100%,#1a9a5566,transparent 70%),
+  linear-gradient(160deg,#06281af0,#0b3d2ae6),
+  url(/images/harvest.jpg) center/cover;
+ box-shadow:0 22px 50px #0b3d2a40}
+.faqhelp:before{content:"";position:absolute;inset:10px;border:1.5px dashed #c6ee5a55;border-radius:22px;pointer-events:none}
+.faqhelp>*{position:relative;z-index:1}
+.faqhelp .ico{margin:0 auto 16px;width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#c6ee5a40,#c6ee5a14);border:1px solid #c6ee5a66;box-shadow:0 0 28px #c6ee5a40;color:var(--lime)}
+.faqhelp h3{font-size:1.5rem;margin-bottom:8px}
+.faqhelp p{max-width:320px;margin:0 auto 22px;line-height:1.6}
+.faqhelp .btn{width:100%;max-width:320px;justify-content:center;padding:16px 22px;box-shadow:0 10px 26px #25d36655}
+@media(min-width:900px){
+ .faqhelp{text-align:left;padding:32px 28px}
+ .faqhelp .ico{margin:0 0 16px}
+ .faqhelp p{margin:0 0 20px}
+ .faqhelp .btn{width:auto}
+}
