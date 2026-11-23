@@ -76,10 +76,7 @@ export function Home() {
       </section>
 
       <div className="wrap">
-        <div className="stats">
-          {[['19+', 'Herb varieties'], ['12', 'Months of supply'], ['100%', 'Kenyan grown'], ['Global', 'Export focus']].map(([a, b]) => (
-            <div className="stat" key={b}><b>{a}</b><span>{b}</span></div>))}
-        </div>
+
       </div>
 
       <section id="about">
