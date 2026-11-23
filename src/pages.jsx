@@ -259,9 +259,23 @@ export function Export() {
         </div>
       </div></section>
 
-      <section><div className="wrap">
-        <div className="center"><span className="pill">Shipping</span><h2>Air and sea freight</h2></div>
-        <div className="grid exship">{ship.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div>
+      <section className="exship2"><div className="wrap">
+        <div className="center"><span className="pill">Shipping</span><h2>Air and sea freight</h2>
+          <p className="lead">Choose the route that suits your product, volume and budget.</p></div>
+        <div className="shipgrid">
+          {[
+            { I: Airplane, cls: 'air', t: 'Air freight', tag: 'Best for fresh herbs', d: 'Fast transit protects aroma, colour and shelf life.', pts: ['Fastest route to your market', 'Keeps fresh herbs at their best', 'Ideal for smaller, frequent orders'] },
+            { I: Boat, cls: 'sea', t: 'Sea freight', tag: 'Best for dried products', d: 'Dried leaves and flowers shipped in larger volumes at lower cost.', pts: ['Lower cost for larger volumes', 'Suited to dried leaves and flowers', 'Ideal for bulk and contract orders'] },
+          ].map((x, i) => (
+            <Reveal key={x.t} delay={i * 120}><div className={'shipcard ' + x.cls}>
+              <x.I className="shipbig" size={190} weight="duotone" />
+              <div className="shiptop"><div className="shipico"><x.I size={32} weight="duotone" /></div><span className="shiptag">{x.tag}</span></div>
+              <h3>{x.t}</h3>
+              <p>{x.d}</p>
+              <ul>{x.pts.map(pt => <li key={pt}><CheckCircle size={20} weight="fill" /> {pt}</li>)}</ul>
+              <a className="shipbtn" href={wa('Hello LUMIA FRESH, I would like to ask about ' + x.t.toLowerCase() + '.')} target="_blank" rel="noreferrer"><WhatsappLogo size={18} weight="fill" /> Ask about {x.t.toLowerCase()}</a>
+            </div></Reveal>))}
+        </div>
       </div></section>
 
       <section className="dark exterms"><div className="wrap">

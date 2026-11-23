@@ -386,3 +386,23 @@ html,body{max-width:100%;overflow-x:clip}
 .exhero p{margin-top:8px;font-size:1rem;opacity:.88}
 .exhero .row{margin-top:20px}
 .exfacts{margin-top:-46px}
+/* ---- Export: shipping cards ---- */
+.exship2{background:radial-gradient(500px 260px at 100% 0%,#c6ee5a22,transparent 70%),#fff}
+.shipgrid{display:grid;gap:18px;margin-top:34px}
+.shipgrid>.rv{display:flex}
+.shipcard{position:relative;overflow:hidden;width:100%;border-radius:28px;padding:26px 24px;color:#fff;box-shadow:0 18px 40px #0b3d2a33}
+.shipcard.air{background:radial-gradient(300px 200px at 100% 0%,#c6ee5a40,transparent 70%),linear-gradient(145deg,#1a9a55,#06281a)}
+.shipcard.sea{background:radial-gradient(300px 200px at 100% 0%,#7fd6ff40,transparent 70%),linear-gradient(145deg,#1f86b8,#0a3550)}
+.shipbig{position:absolute;right:-40px;bottom:-40px;color:#ffffff12;pointer-events:none}
+.shiptop{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px;position:relative}
+.shipico{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:#ffffff22;border:1px solid #ffffff44;backdrop-filter:blur(8px);box-shadow:0 0 26px #ffffff33}
+.shiptag{background:#ffffff1f;border:1px solid #ffffff40;border-radius:999px;padding:7px 14px;font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.shipcard h3{color:#fff;font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:8px;position:relative}
+.shipcard p{color:#e2f0e8;position:relative}
+.shipcard ul{list-style:none;display:grid;gap:10px;margin:20px 0 24px;position:relative}
+.shipcard li{display:flex;gap:10px;align-items:center;font-weight:600;font-size:.95rem}
+.shipcard.air li svg{color:var(--lime)}
+.shipcard.sea li svg{color:#8fe0ff}
+.shipbtn{position:relative;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--g0);font-weight:700;padding:13px 20px;border-radius:999px;box-shadow:0 8px 20px #0004;transition:.25s}
+.shipbtn:hover{transform:translateY(-2px)}
+@media(min-width:860px){.shipgrid{grid-template-columns:1fr 1fr;gap:24px}.shipcard{padding:34px 32px}}
