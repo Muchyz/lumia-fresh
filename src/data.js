@@ -2,7 +2,7 @@ export const C = {
   "name": "LUMIA FRESH",
   "tag": "Equatorial Highlands Organics",
   "phone": "+254 711 552410",
-  "email": "info@lumiafresh.co.ke",
+  "email": "info@michael.co.ke",
   "location": "Kenyan Equatorial Highlands",
   "about": "We are pioneers of organic herbs and produce grown in the fertile tropical highlands along the Equator. Our equatorial climate and rich volcanic soils allow consistent, all-season production of fresh aromatic herbs, year-round.",
   "mission": "To be the world's most preferred producer and exporter of authentic organic herbs, supplying every major global market while upholding Geographical Indication (GI) standards that guarantee the true origin, purity and quality of every harvest.",
