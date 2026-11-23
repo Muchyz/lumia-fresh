@@ -754,3 +754,19 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
  .hhcard li svg{flex:none;color:var(--lime);margin-top:1px}
  .hhcardlink{position:relative;display:inline-flex;align-items:center;gap:8px;color:var(--lime);font-weight:800;font-size:.92rem}
 }
+/* ---- Home hero: mobile tighten ---- */
+.hhbadge{display:inline-flex;width:auto;max-width:100%;white-space:nowrap;font-size:.66rem;letter-spacing:.1em;padding:7px 13px;margin-bottom:14px}
+.hh{padding:28px 0 36px}
+.hh h1{font-size:clamp(1.85rem,7.6vw,3.4rem);line-height:1.1}
+.hh p{margin-top:12px;font-size:.96rem;line-height:1.55}
+.hhbtns{margin-top:20px}
+.hhbtns .btn{padding:13px 10px}
+.hhlink{margin-top:14px;font-size:.9rem}
+.hhchips{margin-top:18px;padding-top:16px;gap:7px}
+.hhchips span{padding:7px 11px;font-size:.74rem}
+.hhchips span:nth-child(n+4){display:none}
+@media(min-width:700px){
+ .hhchips span:nth-child(n+4){display:inline-flex}
+ .hh{padding:80px 0 70px}
+ .hhbadge{font-size:.72rem;letter-spacing:.14em;padding:8px 16px}
+}

@@ -62,9 +62,9 @@ export function Home() {
         <div className="wrap">
           <div className="hhgrid">
             <div className="hhmain">
-              <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Kenyan herbs for global buyers</span>
+              <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Kenyan herbs for importers</span>
               <h1>Premium Kenyan herbs, <em>delivered fresh to your market</em></h1>
-              <p>Direct from our equatorial farms to importers, wholesalers and distributors, with year-round supply, contract farming and reliable air and sea freight.</p>
+              <p>Direct from our equatorial farms to importers and wholesalers, with year-round supply and reliable air and sea freight.</p>
               <div className="hhbtns">
                 <Link to="/contact" className="btn btn-lime">Get a Quote <PaperPlaneTilt size={18} weight="bold" /></Link>
                 <a href={wa('Hello LUMIA FRESH, I would like a quote.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
