@@ -73,7 +73,7 @@ export const PRODUCTS = [
     "name": "Marjoram",
     "cat": "Herbs",
     "desc": "Sweet, mild herb that complements meats and sauces.",
-    "img": ""
+    "img": "marjoram.jpg"
   },
   {
     "name": "Spearmint",
