@@ -379,3 +379,10 @@ html,body{max-width:100%;overflow-x:clip}
 .exhero h1{font-size:clamp(2.3rem,7vw,4.2rem);max-width:760px}
 .exhero p{max-width:560px;font-size:1.1rem;opacity:.93}
 .exfacts{margin-top:-62px}
+/* ---- Export: compact banner ---- */
+.exhero{min-height:0;display:block;padding:48px 0 78px}
+.exhero .exbg{background:linear-gradient(135deg,#06281af2,#0b3d2ad9),url(/images/greenhouse.jpg) center/cover}
+.exhero h1{font-size:clamp(1.9rem,5vw,2.8rem);max-width:none}
+.exhero p{margin-top:8px;font-size:1rem;opacity:.88}
+.exhero .row{margin-top:20px}
+.exfacts{margin-top:-46px}

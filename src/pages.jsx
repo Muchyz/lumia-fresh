@@ -219,14 +219,12 @@ export function Export() {
       <section className="exhero">
         <div className="exbg" />
         <div className="wrap">
-          <span className="badge"><Airplane size={18} weight="duotone" /> Export &amp; Wholesale</span>
-          <h1>Kenyan organic herbs, <em>delivered worldwide</em></h1>
-          <p>Flexible supply for importers, wholesalers and distributors, with contract farming and year-round harvests.</p>
+          <h1>Export &amp; Wholesale</h1>
+          <p>Flexible supply for importers, wholesalers and distributors.</p>
           <div className="row">
             <Link to="/contact" className="btn btn-lime">Request a quote <PaperPlaneTilt size={18} weight="bold" /></Link>
             <a href={wa('Hello LUMIA FRESH, I would like export pricing.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
           </div>
-          <div className="hchips"><span><Airplane size={18} weight="duotone" /> Air freight</span><span><Boat size={18} weight="duotone" /> Sea freight</span><span><Package size={18} weight="duotone" /> Export packing</span></div>
         </div>
       </section>
 
