@@ -131,7 +131,7 @@ export function Footer() {
           <a href={`mailto:${C.email}`}><EnvelopeSimple size={16} weight="duotone" /> {C.email}</a>
         </div>
         <div className="ftgrid">
-          <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/certifications', 'Certifications'], ['/contact', 'Contact']]} />
+          <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/certifications', 'Certifications'], ['/testimonials', 'Testimonials'], ['/contact', 'Contact']]} />
           <Col t="Products" items={[['/products', 'All Products'], ['/products', 'Herbs'], ['/products', 'Flowers'], ['/products', 'Botanicals']]} />
           <Col t="Support" items={[['/contact', 'Contact Us'], ['/contact', 'Request a Quote'], ['/export', 'Shipping & Packaging'], ['/about', 'Our Story']]} />
         </div>

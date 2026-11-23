@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { Routes, Route, useLocation } from 'react-router-dom'
 import { Navbar, Footer, WhatsAppFab } from './ui.jsx'
+import Testimonials from './Testimonials.jsx'
 import { Home, About, Products, Export, Contact, Certifications } from './pages.jsx'
 
 function ScrollTop() {
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/export" element={<Export />} />
           <Route path="/certifications" element={<Certifications />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/testimonials" element={<Testimonials />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
