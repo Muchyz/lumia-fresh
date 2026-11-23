@@ -778,3 +778,19 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 @media(min-width:861px){.totop{right:28px;bottom:112px}}
 /* ---- Footer bar: centre copyright ---- */
 .ftbar{justify-content:center;text-align:center}
+/* ---- Marquee strip glow-up ---- */
+.marquee{position:relative;padding:20px 0;background:
+ radial-gradient(400px 120px at 20% 0%,#c6ee5a26,transparent 70%),
+ radial-gradient(400px 120px at 80% 100%,#1a9a5544,transparent 70%),
+ linear-gradient(180deg,#0b3d2a,#06281a);
+ border-top:1px solid #c6ee5a55;border-bottom:1px solid #c6ee5a33;
+ -webkit-mask-image:none;mask-image:none}
+.marquee:before,.marquee:after{content:"";position:absolute;top:0;bottom:0;width:70px;z-index:2;pointer-events:none}
+.marquee:before{left:0;background:linear-gradient(90deg,#06281a,transparent)}
+.marquee:after{right:0;background:linear-gradient(270deg,#06281a,transparent)}
+.marquee .track{gap:0;align-items:center;will-change:transform;animation:scroll 38s linear infinite}
+.marquee .track>*{display:inline-flex;align-items:center;gap:10px;flex:none;margin-right:14px;padding:10px 20px;border-radius:999px;white-space:nowrap;font-weight:700;font-size:1rem;letter-spacing:.01em;color:#fff;background:linear-gradient(145deg,#ffffff1c,#ffffff08);border:1px solid #ffffff26;box-shadow:0 6px 18px #0003}
+.marquee .track>* svg{flex:none;color:var(--lime);filter:drop-shadow(0 0 6px #c6ee5a88)}
+.marquee:hover .track,.marquee:active .track{animation-play-state:paused}
+@media(prefers-reduced-motion:reduce){.marquee .track{animation:none}}
+@media(min-width:861px){.marquee{padding:24px 0}.marquee:before,.marquee:after{width:140px}.marquee .track>*{padding:12px 26px;font-size:1.08rem}}
