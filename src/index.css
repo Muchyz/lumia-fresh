@@ -815,3 +815,21 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
  .marquee .track>*{font-size:2.1rem;margin-right:48px;gap:48px}
  .marquee .track>* svg{width:32px;height:32px}
 }
+/* ---- Marquee strip: refined professional ---- */
+.marquee{padding:0;background:linear-gradient(180deg,#0a3a28,#06281a);position:relative;border:0;
+ box-shadow:inset 0 1px 0 #c6ee5a55,inset 0 -1px 0 #c6ee5a22}
+.marquee:before,.marquee:after{width:110px}
+.marquee:before{background:linear-gradient(90deg,#06281a 15%,transparent)}
+.marquee:after{background:linear-gradient(270deg,#06281a 15%,transparent)}
+.marquee .track{animation-duration:46s;align-items:center}
+.marquee .track>*{padding:20px 0;margin:0;gap:12px;border:0;border-radius:0;background:none;box-shadow:none;text-shadow:none;
+ font-family:inherit;font-style:normal;font-weight:700;font-size:.82rem;letter-spacing:.2em;text-transform:uppercase;color:#e4f2ea;
+ padding-right:34px;margin-right:34px;position:relative}
+.marquee .track>*:not(:last-child):after{content:"";position:absolute;right:-4px;top:50%;width:7px;height:7px;transform:translateY(-50%) rotate(45deg);background:var(--lime);opacity:.85;box-shadow:0 0 10px #c6ee5a88}
+.marquee .track>*:nth-child(3n+1){color:#e4f2ea}
+.marquee .track>* svg{order:0;width:18px;height:18px;color:var(--lime);filter:none;opacity:.9}
+.marquee .track>*:hover{color:var(--lime)}
+@media(min-width:861px){
+ .marquee .track>*{padding-top:26px;padding-bottom:26px;font-size:.92rem;padding-right:48px;margin-right:48px}
+ .marquee:before,.marquee:after{width:220px}
+}
