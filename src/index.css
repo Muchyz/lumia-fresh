@@ -406,3 +406,28 @@ html,body{max-width:100%;overflow-x:clip}
 .shipbtn{position:relative;display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--g0);font-weight:700;padding:13px 20px;border-radius:999px;box-shadow:0 8px 20px #0004;transition:.25s}
 .shipbtn:hover{transform:translateY(-2px)}
 @media(min-width:860px){.shipgrid{grid-template-columns:1fr 1fr;gap:24px}.shipcard{padding:34px 32px}}
+/* ---- Export: design polish ---- */
+.exhero~section h2,.exfacts~section h2{position:relative;padding-bottom:16px}
+.center h2:after{content:"";position:absolute;left:50%;bottom:0;width:60px;height:4px;border-radius:4px;transform:translateX(-50%);background:linear-gradient(90deg,var(--g2),var(--lime))}
+.exchecks li{background:#f3faf5;border:1px solid #d6ebdc;border-radius:14px;padding:11px 14px}
+.imgwrap:before{content:"";position:absolute;inset:14px -12px -12px 14px;border:3px solid var(--lime);border-radius:28px;z-index:0}
+.imgwrap img{position:relative;z-index:1}
+.imgwrap .float{z-index:2}
+.exfact{border-top:4px solid var(--g2)}
+.exfacts>.rv:nth-child(2) .exfact{border-top-color:var(--gold)}
+.exfacts>.rv:nth-child(3) .exfact{border-top-color:#25a2d6}
+.exfacts>.rv:nth-child(4) .exfact{border-top-color:#8a5be0}
+/* trade terms as cards */
+.extable{display:grid;gap:12px;background:none;border:0;border-radius:0;backdrop-filter:none;overflow:visible;margin-top:30px}
+.tcard{display:flex;gap:14px;align-items:center;background:linear-gradient(145deg,#ffffff1f,#ffffff08);border:1px solid #ffffff2a;border-radius:20px;padding:16px 18px;backdrop-filter:blur(10px);transition:.25s}
+.tcard:hover{border-color:var(--lime);transform:translateY(-3px);box-shadow:0 14px 30px #0006}
+.tico{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;color:var(--lime);background:radial-gradient(circle at 30% 30%,#c6ee5a40,#c6ee5a12);border:1px solid #c6ee5a55;box-shadow:0 0 20px #c6ee5a30}
+.tcard b{display:block;color:var(--lime);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+.tcard span{color:#fff;font-weight:600;font-size:.95rem;line-height:1.4}
+.extable>.tcard:last-child:nth-child(odd){grid-column:1/-1}
+@media(min-width:700px){.extable{grid-template-columns:1fr 1fr;gap:16px}}
+@media(min-width:1000px){.extable{grid-template-columns:repeat(3,1fr)}.extable>.tcard:last-child:nth-child(odd){grid-column:auto}}
+/* faq + cta */
+.exqs summary{font-size:1.02rem}
+.exqs details[open] summary{color:var(--g2)}
+.exfaq .pill{margin-bottom:12px}

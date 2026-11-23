@@ -281,7 +281,8 @@ export function Export() {
       <section className="dark exterms"><div className="wrap">
         <div className="center"><span className="pill pl">Trade terms</span><h2>At a glance</h2></div>
         <Reveal><div className="extable">
-          {terms.map(([a, b]) => <div key={a} className="exrow"><b>{a}</b><span>{b}</span></div>)}
+          {terms.map(([a, b], i) => { const TI = [Handshake, Leaf, Package, Boat, Truck, FileText, Certificate][i] || CheckCircle; return (
+            <div key={a} className="tcard"><div className="tico"><TI size={26} weight="duotone" /></div><div><b>{a}</b><span>{b}</span></div></div>) })}
         </div></Reveal>
       </div></section>
 
