@@ -103,7 +103,7 @@ export const PRODUCTS = [
     "name": "Oregano",
     "cat": "Herbs",
     "desc": "Robust, peppery oregano for Mediterranean dishes.",
-    "img": ""
+    "img": "oregano.jpg"
   },
   {
     "name": "Thyme",
