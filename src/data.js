@@ -122,5 +122,11 @@ export const PRODUCTS = [
     "cat": "Herbs",
     "desc": "French-style tarragon with a delicate anise note.",
     "img": "tarragon.jpg"
+  },
+  {
+    "name": "Chives",
+    "cat": "Herbs",
+    "desc": "Fresh, mild onion-flavoured chives for garnish, salads and sauces.",
+    "img": "chives.jpg"
   }
 ]
