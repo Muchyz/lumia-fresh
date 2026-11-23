@@ -386,3 +386,13 @@ html,body{max-width:100%;overflow-x:clip}
 .exhero p{margin-top:8px;font-size:1rem;opacity:.88}
 .exhero .row{margin-top:20px}
 .exfacts{margin-top:-46px}
+/* ---- Konza-style mobile navbar ---- */
+.mailbtn{display:none}
+@media(max-width:860px){
+ .nav .wrap{gap:8px}
+ .burger{display:inline-flex;align-items:center;gap:8px;order:1;background:var(--g1);color:#fff;border:0;border-radius:999px;padding:11px 18px;font:inherit;font-weight:800;letter-spacing:.06em;font-size:.9rem;box-shadow:0 6px 16px #0b3d2a40}
+ .burger svg{color:var(--lime)}
+ .brand{order:2;margin:0 auto}
+ .brand img{height:50px}
+ .mailbtn{order:3;display:grid;place-items:center;width:56px;height:44px;border-radius:999px;background:var(--g1);color:#fff;box-shadow:0 6px 16px #0b3d2a40}
+}
