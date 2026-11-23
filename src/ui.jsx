@@ -125,7 +125,7 @@ export function Footer() {
           <p className="fttag">{C.tag}</p>
         </div>
         <div className="ftabout">
-          <p>Certified organic herbs grown in the fertile Kenyan highlands along the Equator and exported worldwide.</p>
+          <p>Certified organic herbs grown in the fertile equatorial highlands along the Equator and exported worldwide.</p>
           <span><MapPin size={16} weight="duotone" /> {C.location}</span>
           <a href={`tel:${tel}`}><Phone size={16} weight="duotone" /> {C.phone}</a>
           <a href={`mailto:${C.email}`}><EnvelopeSimple size={16} weight="duotone" /> {C.email}</a>

@@ -30,7 +30,7 @@ function ProductCard({ p, i = 0 }) {
 const WHY = [
   [Sun, 'Year-round supply', 'Equatorial climate means steady harvests with no seasonal gaps.'],
   [Plant, 'Organic farming', 'Grown sustainably in rich volcanic soils, without harsh chemicals.'],
-  [MapTrifold, 'Traceable origin', 'Authentic Kenyan produce, committed to Geographical Indication standards.'],
+  [MapTrifold, 'Traceable origin', 'Authentic highland produce, committed to Geographical Indication standards.'],
   [Package, 'Export-ready packing', 'Ventilated cartons marked Produce of Kenya, packed for freshness.'],
   [Drop, 'Drip-irrigated crops', 'Efficient drip irrigation keeps plants healthy and water use low.'],
   [Snowflake, 'Harvested fresh', 'Cut, graded and packed quickly to protect aroma and shelf life.'],
@@ -62,8 +62,8 @@ export function Home() {
         <div className="wrap">
           <div className="hhgrid">
             <div className="hhmain">
-              <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Kenyan herbs for importers</span>
-              <h1>Premium Kenyan herbs, <em>delivered fresh to your market</em></h1>
+              <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Afro-Organic herbs for importers</span>
+              <h1>Premium Afro-Organic herbs, <em>delivered fresh to your market</em></h1>
               <p>Direct from our equatorial farms to importers and wholesalers, with year-round supply and reliable air and sea freight.</p>
               <div className="hhbtns">
                 <Link to="/contact" className="btn btn-lime">Get a Quote <PaperPlaneTilt size={18} weight="bold" /></Link>
@@ -189,7 +189,7 @@ export function Products() {
   return (
     <>
       <Head t="Our Products" p="Herbs, vegetables, flowers and fruits for export." bg="hero.jpg" />
-      <section><div className="wrap">
+      <section className="prodsec"><div className="wrap">
         <div className="search"><MagnifyingGlass size={20} weight="duotone" /><input placeholder="Search products..." value={q} onChange={e => setQ(e.target.value)} /></div>
         <div className="chips">{cats.map(c => <button key={c} className={'chip' + (c === cat ? ' on' : '')} onClick={() => setCat(c)}>{c}</button>)}</div>
         <div className="grid">{list.map((p, i) => <ProductCard key={p.name} p={p} i={i} />)}</div>
@@ -235,7 +235,7 @@ export function Export() {
     ['Ordering', "Can I order several herbs in one shipment?", "Mixed orders can be discussed. List the herbs and quantities you need and we will advise on the best way to pack and ship them."],
     ['Ordering', "Can I get samples before placing a bulk order?", "Ask us on WhatsApp or by email and we will arrange sample options and specifications with you."],
     ['Products', "Do you supply fresh or dried herbs?", "Both. The form depends on the herb, so tell us what you need and we will advise what we can supply."],
-    ['Products', "Are your herbs organically grown?", "Our herbs are grown organically in the Kenyan equatorial highlands. Ask us for the current certification documents that apply to your market."],
+    ['Products', "Are your herbs organically grown?", "Our herbs are grown organically in the equatorial highlands. Ask us for the current certification documents that apply to your market."],
     ['Products', "Can you grow a specific variety for me?", "Yes. Contract farming lets us grow to your quality specifications, volumes and delivery schedule."],
     ['Products', "Is supply available all year round?", "Our equatorial climate allows continuous, all-season production, so we can plan regular supply with you instead of seasonal batches."],
     ['Shipping', "Which shipping terms do you work with?", "Common terms such as FOB and CIF are available, depending on your port and requirements."],

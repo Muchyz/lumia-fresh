@@ -3,7 +3,7 @@ export const C = {
   "tag": "Equatorial Highlands Organics",
   "phone": "+254 711 552410",
   "email": "info@michael.co.ke",
-  "location": "Kenyan Equatorial Highlands",
+  "location": "Afro-Organic Farms, Equatorial Highlands",
   "about": "We are pioneers of organic herbs and produce grown in the fertile tropical highlands along the Equator. Our equatorial climate and rich volcanic soils allow consistent, all-season production of fresh aromatic herbs, year-round.",
   "mission": "To be the world's most preferred producer and exporter of authentic organic herbs, supplying every major global market while upholding Geographical Indication (GI) standards that guarantee the true origin, purity and quality of every harvest.",
   "vision": "To scale our sustainable equatorial farming and global supply chain to export 1,000 tonnes of fresh organic produce daily, setting the international benchmark for year-round organic agriculture."
@@ -98,12 +98,6 @@ export const PRODUCTS = [
     "cat": "Herbs",
     "desc": "Whole bay leaves for soups, stews and sauces.",
     "img": "bayleaves.jpg"
-  },
-  {
-    "name": "Oregano",
-    "cat": "Herbs",
-    "desc": "Robust, peppery oregano for Mediterranean dishes.",
-    "img": "oregano.jpg"
   },
   {
     "name": "Thyme",
