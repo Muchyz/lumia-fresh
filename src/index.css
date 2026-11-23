@@ -692,3 +692,39 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 /* ---- Home hero: no stats, reset spacing ---- */
 .hh{padding-bottom:40px}
 @media(min-width:700px){.hh{padding-bottom:70px}}
+/* ---- Home hero: polish ---- */
+.hhbg{animation:hhzoom 22s ease-in-out infinite alternate;background:
+ radial-gradient(420px 260px at 100% 0%,#c6ee5a38,transparent 70%),
+ radial-gradient(380px 260px at 0% 100%,#1a9a5555,transparent 70%),
+ linear-gradient(180deg,#06281aa6 0%,#06281a70 38%,#06281af5 100%),
+ url(/images/cilantro.jpg) center/cover}
+@keyframes hhzoom{from{transform:scale(1.04)}to{transform:scale(1.14) translateY(-1.5%)}}
+.hh:after{content:"";position:absolute;left:0;right:0;bottom:0;height:70px;background:linear-gradient(180deg,transparent,#06281a);pointer-events:none}
+.hhbadge{position:relative;box-shadow:0 0 0 1px #c6ee5a22,0 8px 24px #0004}
+.hhdot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 0 #c6ee5a99;animation:hhpulse 2s infinite}
+@keyframes hhpulse{70%{box-shadow:0 0 0 9px #c6ee5a00}100%{box-shadow:0 0 0 0 #c6ee5a00}}
+.hh h1{text-shadow:0 4px 30px #0007;letter-spacing:-.01em}
+.hh h1 em{background:linear-gradient(100deg,#c6ee5a 0%,#eaff9a 45%,#c6ee5a 70%,#8fd63a 100%);background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:transparent;animation:hhshine 6s linear infinite}
+@keyframes hhshine{to{background-position:220% center}}
+.hh p{text-shadow:0 2px 14px #0008}
+.hhbtns .btn{border-radius:999px;transition:transform .25s,box-shadow .25s}
+.hhbtns .btn:active{transform:scale(.97)}
+.hhbtns .btn-lime{background:linear-gradient(135deg,#d4f56a,#b6e43f);box-shadow:0 12px 30px #c6ee5a55,inset 0 1px 0 #fff8}
+.hhbtns .btn-glass{background:linear-gradient(145deg,#ffffff26,#ffffff0a);border:1.5px solid #ffffff55}
+.hhchips{border-top:0;position:relative}
+.hhchips:before{content:"";position:absolute;left:0;right:0;top:0;height:1px;background:linear-gradient(90deg,#c6ee5a99,#ffffff22 60%,transparent)}
+.hhchips span{background:linear-gradient(145deg,#ffffff1f,#ffffff08);border:1px solid #ffffff33;box-shadow:0 6px 18px #0003}
+.hhchips svg{filter:drop-shadow(0 0 6px #c6ee5a88)}
+/* load-in */
+.hh .wrap>*{opacity:0;transform:translateY(18px);animation:hhin .7s cubic-bezier(.2,.8,.2,1) forwards}
+.hh .wrap>:nth-child(1){animation-delay:.05s}
+.hh .wrap>:nth-child(2){animation-delay:.18s}
+.hh .wrap>:nth-child(3){animation-delay:.32s}
+.hh .wrap>:nth-child(4){animation-delay:.46s}
+.hh .wrap>:nth-child(5){animation-delay:.6s}
+@keyframes hhin{to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){
+ .hhbg,.hh h1 em,.hhdot{animation:none}
+ .hh .wrap>*{opacity:1;transform:none;animation:none}
+}
+@media(min-width:700px){.hh h1{font-size:clamp(3rem,6vw,4.6rem)}}

@@ -60,7 +60,7 @@ export function Home() {
       <section className="hh">
         <div className="hhbg" />
         <div className="wrap">
-          <span className="hhbadge"><Leaf size={16} weight="duotone" /> Equatorial Highlands Organics</span>
+          <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Equatorial Highlands Organics</span>
           <h1>Fresh organic herbs from the <em>heart of the Equator</em></h1>
           <p>Premium herbs grown in Kenya's fertile highlands and supplied to importers, wholesalers and distributors worldwide.</p>
           <div className="hhbtns">
