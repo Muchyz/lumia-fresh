@@ -55,7 +55,7 @@ export const PRODUCTS = [
     "name": "Lemon balm (Melissa) crushed",
     "cat": "Botanicals",
     "desc": "Crushed lemon balm for herbal teas and blends.",
-    "img": ""
+    "img": "lemonbalm.jpg"
   },
   {
     "name": "Calendula flowers",
