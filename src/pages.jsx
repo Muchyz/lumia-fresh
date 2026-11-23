@@ -6,7 +6,7 @@ import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldC
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
-const Head = ({ t, p }) => (<div className="page-head"><div className="wrap"><h1>{t}</h1><p>{p}</p></div></div>)
+const Head = ({ t, p, bg }) => (<div className="page-head" style={bg ? { backgroundImage: `linear-gradient(180deg,#06281acc,#06281ae6),url(/images/${bg})` } : undefined}><div className="wrap"><h1>{t}</h1><p>{p}</p></div></div>)
 const Sec = ({ e, t, l }) => (<div className="center"><p className="eyebrow">{e}</p><h2>{t}</h2>{l && <p className="lead">{l}</p>}</div>)
 const IconCard = ({ I, t, d, i = 0 }) => (
   <Reveal delay={i * 90}><div className="card"><div className="pad"><div className="ico"><I size={30} weight="duotone" /></div><h3>{t}</h3><p>{d}</p></div></div></Reveal>
@@ -50,7 +50,7 @@ export function Home() {
   return (
     <>
       <section className="hero" id="home">
-        <Img src="hero.jpg" alt="Irrigated herb rows" />
+        <Img src="cilantro.jpg" alt="Herb fields" />
         <div className="wrap">
           <span className="badge"><Leaf size={18} weight="duotone" /> {C.tag}</span>
           <h1>Fresh organic herbs from the <em>heart of the Equator</em></h1>
@@ -151,7 +151,7 @@ export function Products() {
   const list = PRODUCTS.filter(p => (cat === 'All' || p.cat === cat) && p.name.toLowerCase().includes(q.toLowerCase()))
   return (
     <>
-      <Head t="Our Products" p="Leaves, flowers and botanicals for export." />
+      <Head t="Our Products" p="Leaves, flowers and botanicals for export." bg="hero.jpg" />
       <section><div className="wrap">
         <div className="search"><MagnifyingGlass size={20} weight="duotone" /><input placeholder="Search herbs..." value={q} onChange={e => setQ(e.target.value)} /></div>
         <div className="chips">{cats.map(c => <button key={c} className={'chip' + (c === cat ? ' on' : '')} onClick={() => setCat(c)}>{c}</button>)}</div>
