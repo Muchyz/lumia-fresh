@@ -453,3 +453,13 @@ html,body{max-width:100%;overflow-x:clip}
  .faqwrap{grid-template-columns:.8fr 1.4fr;gap:50px;align-items:start}
  .faqside{position:sticky;top:96px}
 }
+/* ---- FAQ overflow fix ---- */
+.faqwrap{grid-template-columns:minmax(0,1fr)}
+.faqside,.faqmain{min-width:0;max-width:100%}
+.faqtabs{max-width:100%}
+.exqs,.exqs details{min-width:0;max-width:100%}
+.qt{min-width:0;overflow-wrap:anywhere}
+.faqhelp{max-width:100%}
+@media(min-width:900px){
+ .faqwrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
+}
