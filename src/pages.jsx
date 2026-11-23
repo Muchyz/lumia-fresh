@@ -60,17 +60,33 @@ export function Home() {
       <section className="hh">
         <div className="hhbg" />
         <div className="wrap">
-          <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Equatorial Highlands Organics</span>
-          <h1>Fresh organic herbs from the <em>heart of the Equator</em></h1>
-          <p>Premium herbs grown in Kenya's fertile highlands and supplied to importers, wholesalers and distributors worldwide.</p>
-          <div className="hhbtns">
-            <Link to="/products" className="btn btn-lime">View Products <ArrowRight size={18} weight="bold" /></Link>
-            <a href={wa('Hello LUMIA FRESH, I would like a quote.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
-          </div>
-          <div className="hhchips">
-            <span><MapPin size={16} weight="duotone" /> Kenyan highlands</span>
-            <span><Plant size={16} weight="duotone" /> Contract farming</span>
-            <span><Airplane size={16} weight="duotone" /> Air &amp; sea freight</span>
+          <div className="hhgrid">
+            <div className="hhmain">
+              <span className="hhbadge"><i className="hhdot" /><Leaf size={16} weight="duotone" /> Kenyan herbs for global buyers</span>
+              <h1>Premium Kenyan herbs, <em>delivered fresh to your market</em></h1>
+              <p>Direct from our equatorial farms to importers, wholesalers and distributors, with year-round supply, contract farming and reliable air and sea freight.</p>
+              <div className="hhbtns">
+                <Link to="/contact" className="btn btn-lime">Get a Quote <PaperPlaneTilt size={18} weight="bold" /></Link>
+                <a href={wa('Hello LUMIA FRESH, I would like a quote.')} target="_blank" rel="noreferrer" className="btn btn-glass"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
+              </div>
+              <Link to="/products" className="hhlink">Browse our products <ArrowRight size={16} weight="bold" /></Link>
+              <div className="hhchips">
+                <span><CalendarCheck size={16} weight="duotone" /> Year-round supply</span>
+                <span><Plant size={16} weight="duotone" /> Contract farming</span>
+                <span><Airplane size={16} weight="duotone" /> Air &amp; sea freight</span>
+                <span><Package size={16} weight="duotone" /> Export-ready packing</span>
+              </div>
+            </div>
+            <aside className="hhcard">
+              <h3>Why importers choose us</h3>
+              <ul>
+                <li><CheckCircle size={22} weight="fill" /> Cut, graded and packed fresh for export</li>
+                <li><CheckCircle size={22} weight="fill" /> Steady harvests from equatorial farms</li>
+                <li><CheckCircle size={22} weight="fill" /> Samples and a clear quote before you commit</li>
+                <li><CheckCircle size={22} weight="fill" /> Direct support on WhatsApp, phone or email</li>
+              </ul>
+              <Link to="/export" className="hhcardlink">Export &amp; wholesale details <ArrowRight size={16} weight="bold" /></Link>
+            </aside>
           </div>
         </div>
       </section>
