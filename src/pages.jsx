@@ -42,7 +42,7 @@ const OFFERS = [
   [Truck, 'Ready-Crop Supply', 'Export-ready harvests straight from our highland farms, available on demand all season.'],
   [ShieldCheck, 'Organic Products', 'Sustainably grown, traceable herbs ready for international retail and foodservice markets.'],
   [Tag, 'Custom Packaging & Labelling', 'Packed to your required sizes and cartons, with private labelling available on request.'],
-  [Airplane, 'Air & Sea Freight', 'Fresh herbs by air, dried products in bulk by sea, with trade terms to suit your port.'],
+  [Airplane, 'Air & Sea Freight', 'Fresh herbs by air and sea in refrigerated cartons, with trade terms to suit your port.'],
   [PaperPlaneTilt, 'Samples & Fast Quotes', 'Ask for samples and specifications, and get a clear quote before you commit to a bulk order.'],
 ]
 const STEPS = [
@@ -113,7 +113,7 @@ export function Home() {
 
       <section className="alt" id="products">
         <div className="wrap">
-          <Sec e="Our products" t="Herbs, leaves & flowers" l="A growing range of fresh and dried herbs for export." />
+          <Sec e="Our products" t="Herbs, leaves & flowers" l="A growing range of fresh herbs for export." />
           <div className="grid">{PRODUCTS.filter(p => p.img).slice(0, 6).map((p, i) => <ProductCard key={p.name} p={p} i={i} />)}</div>
           <div className="center row" style={{ justifyContent: 'center' }}>
             <Link to="/products" className="btn btn-p">See all products <ArrowRight size={18} weight="bold" /></Link></div>
@@ -208,14 +208,14 @@ export function Export() {
     [Package, 'Export packing', 'Ventilated cartons, Produce of Kenya'],
     [GlobeHemisphereWest, 'Worldwide', 'Air and sea freight'],
   ]
-  const checks = ['Wholesale and bulk quantities', 'Fresh and dried products', 'Year-round supply from equatorial farms', 'Contract farming for specific varieties']
+  const checks = ['Wholesale and bulk quantities', 'Fresh organic produce', 'Year-round supply from equatorial farms', 'Contract farming for specific varieties']
   const ship = [
     [Airplane, 'Air freight', 'Best for fresh herbs. Fast transit protects aroma, colour and shelf life.'],
-    [Boat, 'Sea freight', 'Best for dried leaves and flowers shipped in larger volumes at lower cost.'],
+    [Boat, 'Sea freight', 'Refrigerated sea freight for larger fresh volumes at lower cost.'],
   ]
   const terms = [
     ['Order type', 'Wholesale, bulk and contract farming'],
-    ['Product form', 'Fresh, dried or crushed, depending on the herb'],
+    ['Product form', 'Fresh produce'],
     ['Packaging', 'Ventilated export cartons marked Produce of Kenya'],
     ['Trade terms', 'FOB, CIF and others, depending on your destination'],
     ['Minimum order', 'On request, depending on the product'],
@@ -230,16 +230,16 @@ export function Export() {
   ]
   const fcats = ['All', 'Ordering', 'Products', 'Shipping', 'Documents']
   const faqs = [
-    ['Ordering', "What is your minimum order quantity?", "It depends on the product, its form (fresh, dried or crushed) and your destination. Send us your target volume and we will confirm what is possible."],
+    ['Ordering', "What is your minimum order quantity?", "It depends on the product, and your destination. Send us your target volume and we will confirm what is possible."],
     ['Ordering', "How do I request a quote?", "Message us on WhatsApp, call, or use the contact form. Tell us the herbs, volumes, destination and when you need delivery, and we will reply with a quote."],
     ['Ordering', "Can I order several herbs in one shipment?", "Mixed orders can be discussed. List the herbs and quantities you need and we will advise on the best way to pack and ship them."],
     ['Ordering', "Can I get samples before placing a bulk order?", "Ask us on WhatsApp or by email and we will arrange sample options and specifications with you."],
-    ['Products', "Do you supply fresh or dried herbs?", "Both. The form depends on the herb, so tell us what you need and we will advise what we can supply."],
+    ['Products', "Do you supply fresh herbs?", "Yes. We supply purely fresh organic herbs, vegetables, flowers and fruits. Tell us what you need and we will confirm availability."],
     ['Products', "Are your herbs organically grown?", "Our herbs are grown organically in the equatorial highlands. Ask us for the current certification documents that apply to your market."],
     ['Products', "Can you grow a specific variety for me?", "Yes. Contract farming lets us grow to your quality specifications, volumes and delivery schedule."],
     ['Products', "Is supply available all year round?", "Our equatorial climate allows continuous, all-season production, so we can plan regular supply with you instead of seasonal batches."],
     ['Shipping', "Which shipping terms do you work with?", "Common terms such as FOB and CIF are available, depending on your port and requirements."],
-    ['Shipping', "How are fresh and dried products shipped?", "Fresh herbs normally travel by air to protect aroma and shelf life. Dried leaves and flowers can go by sea in larger volumes at lower cost."],
+    ['Shipping', "How are fresh products shipped?", "Fresh herbs normally travel by air to protect aroma and shelf life. Larger volumes can go by refrigerated sea freight at lower cost."],
     ['Shipping', "How are the products packed?", "In ventilated export cartons marked Produce of Kenya. Custom packing sizes and labelling can be discussed on request."],
     ['Documents', "Which export documents can you provide?", "Export and certification documents are available on request. Tell us what your import authority requires and we will confirm what we can supply."],
     ['Documents', "What are your payment terms?", "Payment terms are agreed with each buyer when the order is confirmed."],
@@ -296,7 +296,7 @@ export function Export() {
         <div className="shipgrid">
           {[
             { I: Airplane, cls: 'air', t: 'Air freight', tag: 'Best for fresh herbs', d: 'Fast transit protects aroma, colour and shelf life.', pts: ['Fastest route to your market', 'Keeps fresh herbs at their best', 'Ideal for smaller, frequent orders'] },
-            { I: Boat, cls: 'sea', t: 'Sea freight', tag: 'Best for dried products', d: 'Dried leaves and flowers shipped in larger volumes at lower cost.', pts: ['Lower cost for larger volumes', 'Suited to dried leaves and flowers', 'Ideal for bulk and contract orders'] },
+            { I: Boat, cls: 'sea', t: 'Sea freight', tag: 'Best for large volumes', d: 'Fresh produce shipped in refrigerated containers at lower cost.', pts: ['Lower cost for larger volumes', 'Refrigerated containers keep produce fresh', 'Ideal for bulk and contract orders'] },
           ].map((x, i) => (
             <Reveal key={x.t} delay={i * 120}><div className={'shipcard ' + x.cls}>
               <x.I className="shipbig" size={190} weight="duotone" />

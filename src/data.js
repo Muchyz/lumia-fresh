@@ -30,19 +30,19 @@ export const PRODUCTS = [
   {
     "name": "Hibiscus flowers",
     "cat": "Flowers",
-    "desc": "Dried calyces for teas, infusions and beverages.",
+    "desc": "Fresh hibiscus flowers for teas, infusions and beverages.",
     "img": "hibiscus.jpg"
   },
   {
-    "name": "Sage whole",
+    "name": "Sage",
     "cat": "Herbs",
-    "desc": "Whole sage leaves with a rich, earthy aroma.",
+    "desc": "Fresh sage leaves with a rich, earthy aroma.",
     "img": "sage.jpg"
   },
   {
     "name": "Moringa",
     "cat": "Herbs",
-    "desc": "Nutrient-rich moringa leaves, fresh or dried.",
+    "desc": "Nutrient-rich fresh moringa leaves.",
     "img": "moringa.jpg"
   },
   {
@@ -52,21 +52,21 @@ export const PRODUCTS = [
     "img": "lemongrass.jpg"
   },
   {
-    "name": "Lemon balm (Melissa) crushed",
+    "name": "Lemon balm (Melissa)",
     "cat": "Herbs",
-    "desc": "Crushed lemon balm for herbal teas and blends.",
+    "desc": "Fresh lemon balm leaves for herbal teas and blends.",
     "img": "lemonbalm.jpg"
   },
   {
     "name": "Calendula flowers",
     "cat": "Flowers",
-    "desc": "Bright petals for teas, skincare and natural products.",
+    "desc": "Fresh, bright calendula flowers for teas, skincare and natural products.",
     "img": "calendula.jpg"
   },
   {
     "name": "Chamomile flowers",
     "cat": "Flowers",
-    "desc": "Delicate dried flowers for calming herbal teas.",
+    "desc": "Delicate fresh chamomile flowers for calming herbal teas.",
     "img": "chamomile.jpg"
   },
   {
@@ -128,4 +128,8 @@ PRODUCTS.push(
   { name: 'Passion fruit', cat: 'Fruits', desc: 'Aromatic, juicy fruit with an intense tropical flavour.', img: 'passionfruit.jpg' },
   { name: 'Mangoes', cat: 'Fruits', desc: 'Sweet, fibre-free mangoes harvested at peak ripeness.', img: 'mango.jpg' },
   { name: 'Pineapples', cat: 'Fruits', desc: 'Sun-ripened pineapples with natural sweetness.', img: 'pineapple.jpg' }
+)
+
+PRODUCTS.push(
+  { name: 'Oregano', cat: 'Herbs', desc: 'Fresh, robust oregano with a peppery aroma for Mediterranean dishes.', img: 'oregano.jpg' }
 )
