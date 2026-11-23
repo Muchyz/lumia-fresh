@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -146,10 +146,14 @@ export function About() {
         <Reveal><Img src="greenhouse.jpg" alt="Greenhouse" /></Reveal>
         <Reveal delay={120}><div><p className="eyebrow">Our story</p><h2>Grown where the sun is steady</h2><p className="lead">{C.about}</p></div></Reveal>
       </div></section>
-      <section className="alt"><div className="wrap"><div className="grid">
-        <IconCard I={GlobeHemisphereWest} t="Our Mission" d={C.mission} />
-        <IconCard I={Plant} t="Our Vision" d={C.vision} i={1} />
-      </div></div></section>
+      <section className="fnd"><div className="wrap">
+        <Reveal><div className="center"><span className="pill">Our Foundation</span><h2>Vision &amp; <span className="acc">Mission</span></h2></div></Reveal>
+        <div className="fbox">
+          <Reveal><div className="fitem v"><p className="flabel"><Eye size={26} weight="duotone" /> Our Vision</p><p className="ftext">{C.vision}</p></div></Reveal>
+          <Reveal delay={120}><div className="fitem m"><p className="flabel"><Target size={26} weight="duotone" /> Our Mission</p><p className="ftext">{C.mission}</p></div></Reveal>
+        </div>
+        <Reveal><div className="fcard"><h3>Our Commitment</h3><p>{C.about}</p></div></Reveal>
+      </div></section>
       <section><div className="wrap"><Sec e="Gallery" t="Our farms" />
         <div className="grid">{['seedlings.jpg', 'basil.jpg', 'tarragon.jpg'].map((i, k) => (
           <Reveal key={i} delay={k * 90}><div className="card"><Img src={i} alt="Farm" className="pimg" /></div></Reveal>))}</div></div></section>
