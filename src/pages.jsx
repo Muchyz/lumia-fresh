@@ -141,7 +141,14 @@ export function Home() {
 export function About() {
   return (
     <>
-      <Head t="About LUMIA FRESH" p={C.tag} />
+      <section className="abhero">
+        <div className="abbg" />
+        <div className="wrap">
+          <div className="abcrumb"><Link to="/">Home</Link> <span>/</span> About</div>
+          <h1>About LUMIA FRESH</h1>
+          <p>Equatorial Highlands Organics</p>
+        </div>
+      </section>
       <section><div className="wrap split">
         <Reveal><Img src="greenhouse.jpg" alt="Greenhouse" /></Reveal>
         <Reveal delay={120}><div><p className="eyebrow">Our story</p><h2>Grown where the sun is steady</h2><p className="lead">{C.about}</p></div></Reveal>

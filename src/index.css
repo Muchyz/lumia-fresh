@@ -571,3 +571,17 @@ html,body{max-width:100%;overflow-x:clip}
  .exhero{padding:44px 0 80px}
  .exbtns .btn{padding:13px 22px;font-size:.95rem}
 }
+/* ---- About: short hero ---- */
+.abhero{position:relative;overflow:hidden;color:#fff;padding:34px 0 40px;background:#06281a}
+.abbg{position:absolute;inset:0;background:
+ radial-gradient(300px 180px at 100% 0%,#c6ee5a2e,transparent 70%),
+ linear-gradient(135deg,#06281af2,#0b3d2ad0),
+ url(/images/greenhouse.jpg) center/cover}
+.abhero .wrap{position:relative;z-index:1}
+.abcrumb{display:inline-flex;gap:8px;align-items:center;background:#ffffff14;border:1px solid #ffffff30;backdrop-filter:blur(8px);border-radius:999px;padding:6px 14px;font-size:.74rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--lime);margin-bottom:14px}
+.abcrumb a{color:#fff;opacity:.85}
+.abcrumb span{opacity:.5}
+.abhero h1{color:#fff;font-size:clamp(1.8rem,6.5vw,2.8rem);line-height:1.12;margin:0}
+.abhero h1:after{content:"";display:block;width:54px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,var(--g2),var(--lime))}
+.abhero p{margin-top:12px;font-size:1rem;opacity:.9;letter-spacing:.02em}
+@media(min-width:700px){.abhero{padding:48px 0 54px}}
