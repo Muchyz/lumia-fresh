@@ -463,3 +463,25 @@ html,body{max-width:100%;overflow-x:clip}
 @media(min-width:900px){
  .faqwrap{grid-template-columns:minmax(0,.8fr) minmax(0,1.4fr)}
 }
+/* ---- CTA box glow-up ---- */
+.cta{position:relative;overflow:hidden;text-align:center;border-radius:30px;padding:46px 24px 40px;color:#fff;border:1px solid #ffffff26;
+ background:
+  radial-gradient(320px 220px at 100% 0%,#c6ee5a38,transparent 70%),
+  radial-gradient(300px 220px at 0% 100%,#1a9a5566,transparent 70%),
+  linear-gradient(160deg,#06281af0,#0b3d2ae6),
+  url(/images/harvest.jpg) center/cover;
+ box-shadow:0 22px 50px #0b3d2a40}
+.cta:before{content:"";position:absolute;inset:12px;border:1.5px dashed #c6ee5a55;border-radius:22px;pointer-events:none}
+.cta:after{content:"";position:absolute;right:-70px;top:-70px;width:200px;height:200px;border-radius:50%;background:#c6ee5a1a;filter:blur(2px);pointer-events:none}
+.cta>*{position:relative;z-index:1}
+.cta h2{color:#fff;font-family:'Fraunces',serif;font-size:clamp(1.8rem,7vw,2.6rem);line-height:1.15;margin-bottom:12px}
+.cta h2:before{content:"Let's work together";display:block;width:max-content;margin:0 auto 16px;background:#c6ee5a22;border:1px solid #c6ee5a66;color:var(--lime);font-family:inherit;font-size:.72rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;padding:8px 16px;border-radius:999px}
+.cta p{color:#e2f0e8;max-width:460px;margin:0 auto 26px;font-size:1rem;line-height:1.6}
+.cta .row{display:grid;gap:12px;max-width:420px;margin:0 auto}
+.cta .btn{width:100%;justify-content:center;padding:16px 22px}
+.cta .btn-lime{box-shadow:0 10px 26px #c6ee5a55}
+.cta .btn-glass{background:#ffffff14;border:1.5px solid #ffffff55;backdrop-filter:blur(8px)}
+@media(min-width:700px){
+ .cta{padding:64px 48px}
+ .cta .row{grid-template-columns:1fr 1fr;max-width:520px}
+}
