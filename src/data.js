@@ -126,6 +126,6 @@ PRODUCTS.push(
   { name: 'Mint', cat: 'Herbs', desc: 'Fresh mint in several varieties for drinks, teas, confectionery and cooking.', img: 'mint.jpg',
     variants: [
       { name: 'Spearmint', desc: 'Fresh, cool and sweet mint for drinks and cooking.', img: 'mint.jpg' },
-      { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'mint.jpg' }
+      { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'peppermint.jpg' }
     ] }
 )
