@@ -131,7 +131,7 @@ PRODUCTS.push(
 PRODUCTS.push(
   { name: 'Basil', cat: 'Herbs', desc: 'Fresh basil in several varieties for cooking, salads and sauces.', img: 'basil.jpg',
     variants: [
-      { name: 'Sweet Aroma 2', desc: 'Large-leaf sweet basil with a rich, classic aroma.', img: 'basil.jpg' },
+      { name: 'Sweet Aroma 2', desc: 'Large-leaf sweet basil with a rich, classic aroma.', img: 'sweetaroma2.jpg' },
       { name: 'Prospera', desc: 'Sweet basil with full, glossy leaves and a strong aroma.', img: 'prospera.jpg' },
       { name: 'Thai basil', desc: 'Spicy, anise-scented basil with purple stems, ideal for Asian cooking.', img: 'thaibasil.jpg' },
       { name: 'Red basil', desc: 'Deep red-purple leaves with a bold flavour, popular for garnish.', img: 'redbasil.jpg' }
