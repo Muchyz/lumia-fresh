@@ -142,7 +142,6 @@ export function Footer() {
         </div>
         <div className="ftbar">
           <small>© {new Date().getFullYear()} {C.name}. All rights reserved.</small>
-          <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })} aria-label="Back to top"><ArrowUp size={18} weight="bold" /> Top</button>
         </div>
       </div>
     </footer>

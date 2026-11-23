@@ -776,3 +776,5 @@ a.ctcard:hover{transform:translateY(-3px);box-shadow:0 18px 36px #0b3d2a26}
 .totop:hover{background:var(--lime);color:var(--g0)}
 .totop:active{transform:scale(.94)}
 @media(min-width:861px){.totop{right:28px;bottom:112px}}
+/* ---- Footer bar: centre copyright ---- */
+.ftbar{justify-content:center;text-align:center}
