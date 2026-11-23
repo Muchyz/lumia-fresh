@@ -348,7 +348,7 @@ export function Contact() {
   const send = e => { e.preventDefault(); window.open(wa(body), '_blank') }
   const info = [
     [WhatsappLogo, 'WhatsApp', 'Chat with us now', wa('Hello LUMIA FRESH, I would like a quote.'), 'wa'],
-    [Phone, 'Call us', C.phone, 'tel:' + tel, 'ph'],
+    [Phone, 'Call us', C.phone, 'tel:' + tel, 'cph'],
     [EnvelopeSimple, 'Email', C.email, 'mailto:' + C.email, 'em'],
     [MapPin, 'Visit', C.location, null, 'mp'],
   ]
