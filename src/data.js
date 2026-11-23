@@ -129,6 +129,7 @@ PRODUCTS.push(
       { name: 'Peppermint', desc: 'Strong menthol aroma for teas, confectionery and cooking.', img: 'peppermint.jpg' },
       { name: 'Apple mint', desc: 'Soft leaves with a fruity, gentle aroma.', img: 'applemint.jpg' },
       { name: 'Chocolate mint', desc: 'Peppermint type with a cocoa-like note for desserts and drinks.', img: 'chocolatemint.jpg' },
-      { name: 'Curly mint', desc: 'Crinkled, ruffled leaves with a fresh spearmint flavour, popular as a garnish.', img: 'curlymint.jpg' }
+      { name: 'Curly mint', desc: 'Crinkled, ruffled leaves with a fresh spearmint flavour, popular as a garnish.', img: 'curlymint.jpg' },
+      { name: 'Ginger mint', desc: 'Warm, mildly spicy mint with gold-streaked leaves.', img: 'gingermint.jpg' }
     ] }
 )
