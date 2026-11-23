@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
-  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
+  Certificate, Airplane, Boat, SealCheck, CalendarCheck, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
 import { C, PRODUCTS } from './data'
 import { Img, Reveal, wa } from './ui.jsx'
 
@@ -41,6 +41,9 @@ const OFFERS = [
   [Handshake, 'Dedicated Contract Farming', 'Secure a reliable year-round supply. We grow specific varieties to your quality specs, volumes and delivery schedules.'],
   [Truck, 'Ready-Crop Supply', 'Export-ready harvests straight from our highland farms, available on demand all season.'],
   [ShieldCheck, 'Organic Products', 'Sustainably grown, traceable herbs ready for international retail and foodservice markets.'],
+  [Tag, 'Custom Packaging & Labelling', 'Packed to your required sizes and cartons, with private labelling available on request.'],
+  [Airplane, 'Air & Sea Freight', 'Fresh herbs by air, dried products in bulk by sea, with trade terms to suit your port.'],
+  [PaperPlaneTilt, 'Samples & Fast Quotes', 'Ask for samples and specifications, and get a clear quote before you commit to a bulk order.'],
 ]
 const STEPS = [
   ['Send an enquiry', 'Tell us the herbs, volumes and destination.'],
@@ -110,7 +113,11 @@ export function Home() {
 
       <section className="offer" id="offer">
         <div className="wrap"><Sec e="What we offer" t="Built for international buyers" />
-          <div className="grid">{OFFERS.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div></div>
+          <div className="grid">{OFFERS.map(([I, t, d], i) => <IconCard key={t} I={I} t={t} d={d} i={i} />)}</div>
+          <Reveal><div className="ofcta">
+            <div><h3>Need something specific?</h3><p>Tell us the herb, volume and destination and we will tailor a supply plan.</p></div>
+            <a href={wa('Hello LUMIA FRESH, I need a custom supply plan.')} target="_blank" rel="noreferrer" className="btn btn-wa"><WhatsappLogo size={20} weight="fill" /> Talk to us</a>
+          </div></Reveal></div>
       </section>
 
       <section className="alt" id="process">

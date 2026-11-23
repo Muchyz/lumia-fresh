@@ -184,3 +184,16 @@ html,body{max-width:100%;overflow-x:clip}
  .offer .card p{font-size:.8rem;line-height:1.5}
  .offer .card:before{font-size:2rem;right:12px}
 }
+/* ---- Offer: 6 cards + banner ---- */
+.offer .grid>.rv:nth-child(3n+2) .card{border-top-color:var(--gold)}
+.offer .grid>.rv:nth-child(3n) .card{border-top-color:#25a2d6}
+.offer .grid>.rv:nth-child(3n+2) .ico{background:linear-gradient(135deg,#f2b53d,#d98a10);box-shadow:0 10px 22px #f2b53d55}
+.offer .grid>.rv:nth-child(3n) .ico{background:linear-gradient(135deg,#25a2d6,#0f6f99);box-shadow:0 10px 22px #25a2d655}
+.ofcta{margin-top:30px;background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;border-radius:24px;padding:26px 28px;display:flex;gap:18px;align-items:center;justify-content:space-between;flex-wrap:wrap;box-shadow:0 16px 36px #0b3d2a33}
+.ofcta h3{color:#fff;font-family:'Fraunces',serif;font-size:1.3rem;margin-bottom:4px}
+.ofcta p{opacity:.9;max-width:520px;font-size:.95rem}
+@media(max-width:700px){
+ .offer .grid>.rv:nth-child(3){grid-column:auto}
+ .ofcta{padding:22px 18px;text-align:center;justify-content:center}
+ .ofcta .btn{width:100%}
+}
