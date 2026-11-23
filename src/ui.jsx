@@ -62,8 +62,7 @@ export function Navbar() {
             ))}
             <a href={wa()} className="btn btn-wa" target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
           </nav>
-          <button className="burger" onClick={() => setOpen(true)} aria-label="Menu"><List size={22} weight="bold" /> MENU</button>
-          <Link to="/contact" className="mailbtn" aria-label="Contact us"><EnvelopeSimple size={24} weight="bold" /></Link>
+          <button className="burger" onClick={() => setOpen(true)} aria-label="Menu"><List size={28} weight="bold" /></button>
         </div>
       </header>
       <div className={'ovl' + (open ? ' on' : '')} onClick={close} />
