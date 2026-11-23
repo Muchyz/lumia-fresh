@@ -37,7 +37,7 @@ export const PRODUCTS = [
     "name": "Sage whole",
     "cat": "Herbs",
     "desc": "Whole sage leaves with a rich, earthy aroma.",
-    "img": ""
+    "img": "sage.jpg"
   },
   {
     "name": "Moringa",
