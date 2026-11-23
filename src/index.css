@@ -585,3 +585,27 @@ html,body{max-width:100%;overflow-x:clip}
 .abhero h1:after{content:"";display:block;width:54px;height:4px;border-radius:4px;margin-top:12px;background:linear-gradient(90deg,var(--g2),var(--lime))}
 .abhero p{margin-top:12px;font-size:1rem;opacity:.9;letter-spacing:.02em}
 @media(min-width:700px){.abhero{padding:48px 0 54px}}
+/* ---- Certifications page ---- */
+.certs{background:radial-gradient(500px 260px at 100% 0%,#c6ee5a26,transparent 70%),radial-gradient(500px 300px at 0% 100%,#1a9a5518,transparent 70%),linear-gradient(180deg,#f3faf5,#e6f4ea)}
+.certgrid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;margin-top:34px;counter-reset:c}
+.certgrid>.rv{display:flex;min-width:0}
+.certcard{position:relative;counter-increment:c;width:100%;overflow:hidden;background:linear-gradient(180deg,#fff,#f7fcf8);border:1px solid #d6ebdc;border-top:4px solid var(--g2);border-radius:24px;padding:24px 22px;box-shadow:0 12px 30px #0b3d2a14;transition:.3s}
+.certcard:hover{transform:translateY(-4px);box-shadow:0 20px 40px #0b3d2a26}
+.certcard:before{content:"0" counter(c);position:absolute;right:18px;top:12px;font-family:'Fraunces',serif;font-size:2.8rem;font-weight:700;color:#1a9a5518;line-height:1}
+.certtop{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.certcard .ico{margin:0;width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#1a9a55,#0b3d2a);color:#fff;box-shadow:0 10px 22px #1a9a5545}
+.certtag{background:#e6f4ea;color:var(--g2);font-size:.7rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.certshort{display:block;font-size:.78rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin-bottom:4px}
+.certcard h3{font-size:1.2rem;margin-bottom:8px;overflow-wrap:anywhere}
+.certcard p{color:var(--mut);font-size:.94rem;line-height:1.65}
+.certgrid>.rv:nth-child(5n+2) .certcard{border-top-color:var(--gold)}
+.certgrid>.rv:nth-child(5n+2) .ico{background:linear-gradient(135deg,#f2b53d,#d98a10);box-shadow:0 10px 22px #f2b53d55}
+.certgrid>.rv:nth-child(5n+3) .certcard{border-top-color:#25a2d6}
+.certgrid>.rv:nth-child(5n+3) .ico{background:linear-gradient(135deg,#25a2d6,#0f6f99);box-shadow:0 10px 22px #25a2d655}
+.certgrid>.rv:nth-child(5n+4) .certcard{border-top-color:#8a5be0}
+.certgrid>.rv:nth-child(5n+4) .ico{background:linear-gradient(135deg,#8a5be0,#5530a8);box-shadow:0 10px 22px #8a5be055}
+@media(min-width:860px){
+ .certgrid{grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+ .certgrid>.rv:last-child:nth-child(odd){grid-column:1/-1}
+ .certcard{padding:30px 28px}
+}

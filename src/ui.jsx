@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf, CaretRight, ArrowUp, CaretDown, House, Info, Target, Plant, Package, Airplane, Flower, SquaresFour, ArrowRight } from '@phosphor-icons/react'
+import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf, CaretRight, ArrowUp, CaretDown, House, Info, Target, Plant, Package, Airplane, Flower, SquaresFour, ArrowRight , Certificate } from '@phosphor-icons/react'
 import { C } from './data'
 
 export const wa = (t = 'Hello LUMIA FRESH, I would like to enquire about your herbs.') =>
@@ -31,7 +31,7 @@ const LINKS = [['/', 'Home'], ['/about', 'About'], ['/products', 'Products'], ['
 
 const MENU = [
   { to: '/', label: 'Home' },
-  { label: 'Company', items: [['/about', 'About Us', Info], ['/about#foundation', 'Vision & Mission', Target], ['/about#farms', 'Our Farms', Plant]] },
+  { label: 'Company', items: [['/about', 'About Us', Info], ['/about#foundation', 'Vision & Mission', Target], ['/about#farms', 'Our Farms', Plant], ['/certifications', 'Certifications', Certificate]] },
   { label: 'Products', items: [['/products', 'All Products', SquaresFour], ['/products?cat=Herbs', 'Herbs', Leaf], ['/products?cat=Flowers', 'Flowers', Flower], ['/products?cat=Botanicals', 'Botanicals', Plant]] },
   { to: '/export', label: 'Export & Wholesale' },
   { to: '/contact', label: 'Contact' },
@@ -116,7 +116,7 @@ export function Footer() {
           <a href={`mailto:${C.email}`}><EnvelopeSimple size={16} weight="duotone" /> {C.email}</a>
         </div>
         <div className="ftgrid">
-          <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/contact', 'Contact']]} />
+          <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/certifications', 'Certifications'], ['/contact', 'Contact']]} />
           <Col t="Products" items={[['/products', 'All Products'], ['/products', 'Herbs'], ['/products', 'Flowers'], ['/products', 'Botanicals']]} />
           <Col t="Support" items={[['/contact', 'Contact Us'], ['/contact', 'Request a Quote'], ['/export', 'Shipping & Packaging'], ['/about', 'Our Story']]} />
         </div>

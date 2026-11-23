@@ -372,3 +372,52 @@ export function Contact() {
     </>
   )
 }
+
+export function Certifications() {
+  const N = C.name
+  const certs = [
+    [SealCheck, 'Certification', 'Global G.A.P', 'Global G.A.P Certified', N + " is proudly certified under Global G.A.P, a globally recognised standard for agricultural practices. This certification assures our clients of high-quality, safe produce that meets international farming standards in food safety, environmental sustainability and workers' welfare."],
+    [ShieldCheck, 'Certification', 'BRC', 'BRC Food Safety Certification', "We are BRC certified, showing our adherence to globally accepted best practices in food safety, hygiene and traceability. This standard is critical in the food supply chain and lets us consistently deliver safe, high-quality products to international markets."],
+    [Certificate, 'Certification', 'KEPHIS', 'KEPHIS – Export Certification', N + " works closely with KEPHIS (Kenya Plant Health Inspectorate Service) to make sure all our exports meet phytosanitary requirements. This reinforces our commitment to exporting only safe, pest-free, high-quality produce in line with global regulations."],
+    [Plant, 'Membership', 'KEPHIS', 'KEPHIS – Compliance & Inspection', "Our membership and certification through KEPHIS means our production, from farm to packhouse, is routinely inspected and aligned with national and international standards. This is vital for consumer trust and the credibility of our exports."],
+    [Handshake, 'Membership', 'FPC Kenya', 'FPC Kenya – Member', N + " is a proud member of the Fresh Produce Consortium of Kenya (FPC Kenya), the leading body representing the country’s fresh produce growers, exporters and service providers. Membership gives us market intelligence, compliance training aligned with international and European standards, and a trusted industry network that strengthens our reliability as an export partner."],
+  ]
+  return (
+    <>
+      <section className="abhero">
+        <div className="abbg" />
+        <div className="wrap">
+          <div className="abcrumb"><Link to="/">Home</Link> <span>/</span> Certifications</div>
+          <h1>Our Certifications and Memberships</h1>
+          <p>Standards that protect every shipment, from farm to port.</p>
+        </div>
+      </section>
+
+      <section className="certs"><div className="wrap">
+        <div className="center">
+          <span className="pill">Trusted standards</span>
+          <h2>Certifications &amp; Memberships</h2>
+          <p className="lead">Recognised food safety, plant health and industry credentials behind our exports.</p>
+        </div>
+        <div className="certgrid">
+          {certs.map(([I, tag, short, t, d], i) => (
+            <Reveal key={t} delay={i * 90}><div className="certcard">
+              <div className="certtop"><div className="ico"><I size={30} weight="duotone" /></div><span className="certtag">{tag}</span></div>
+              <span className="certshort">{short}</span>
+              <h3>{t}</h3>
+              <p>{d}</p>
+            </div></Reveal>))}
+        </div>
+      </div></section>
+
+      <section><div className="wrap"><div className="cta">
+        <h2>Need our certificates?</h2>
+        <p>Tell us your destination and we will share the documents your importer requires.</p>
+        <div className="row">
+          <a className="btn btn-wa" href={wa('Hello LUMIA FRESH, please share your certificates.')} target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> WhatsApp us</a>
+          <Link to="/contact" className="btn btn-glass">Request a quote <PaperPlaneTilt size={18} weight="bold" /></Link>
+        </div>
+      </div></div></section>
+    </>
+  )
+}
