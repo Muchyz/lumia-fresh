@@ -272,3 +272,26 @@ html,body{max-width:100%;overflow-x:clip}
 .fcard h3{color:#fff;font-family:'Fraunces',serif;font-size:1.7rem;margin-bottom:12px}
 .fcard p{color:#e2efe7;font-size:1.02rem;line-height:1.7}
 @media(min-width:860px){.fbox{grid-template-columns:1fr 1fr;gap:50px}.fcard{padding:46px 44px}}
+/* ---- Mobile drawer ---- */
+.ovl{position:fixed;inset:0;background:#06281a99;backdrop-filter:blur(3px);opacity:0;pointer-events:none;transition:.3s;z-index:80}
+.ovl.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;left:0;bottom:0;width:min(86vw,360px);background:#fff;z-index:90;transform:translateX(-102%);transition:transform .35s cubic-bezier(.2,.8,.2,1);display:flex;flex-direction:column;box-shadow:12px 0 40px #0005}
+.drawer.on{transform:none}
+.dhead{display:flex;align-items:center;justify-content:space-between;padding:10px 20px;border-bottom:1px solid #e1efe6;flex:none}
+.dhead img{height:54px;width:auto}
+.dhead .ph{height:48px;width:48px}
+.dhead button{background:none;border:0;color:var(--g1);cursor:pointer;padding:6px}
+.dbody{padding:8px 20px 28px;overflow-y:auto;flex:1}
+.dlink,.dgh{display:flex;align-items:center;justify-content:space-between;width:100%;padding:17px 0;border:0;border-bottom:1px solid #e6f0ea;background:none;font:inherit;font-weight:700;font-size:1.05rem;color:var(--g0);cursor:pointer;text-align:left}
+.dgh{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:#7a8f83}
+.dgh svg{transition:.25s}
+.dgrp.on .dgh svg{transform:rotate(180deg)}
+.dsub{display:none;padding:6px 0 10px;border-bottom:1px solid #e6f0ea}
+.dgrp.on .dsub{display:grid}
+.dsub a{display:flex;align-items:center;gap:14px;padding:11px 0;font-weight:600;color:var(--ink)}
+.dsub a:hover{color:var(--g2)}
+.di{width:42px;height:42px;border-radius:50%;background:var(--g3);color:var(--g2);display:grid;place-items:center;flex:none}
+.dphone{display:flex;align-items:center;gap:12px;margin:22px 0 14px;font-weight:700;color:var(--g1)}
+.dphone svg{color:var(--g2)}
+.dcta{display:flex;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,#25d366,#128c4a);color:#fff;font-weight:700;padding:16px;border-radius:14px;box-shadow:0 10px 22px #25d36640}
+@media(min-width:861px){.ovl,.drawer{display:none}}

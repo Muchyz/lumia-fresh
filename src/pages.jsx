@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { ArrowRight, CaretDown, Leaf, Plant, GlobeHemisphereWest, Truck, ShieldCheck, Package, Sun,
   Handshake, MagnifyingGlass, PaperPlaneTilt, Phone, EnvelopeSimple, MapPin, WhatsappLogo, MapTrifold,
   Certificate, Airplane, Boat, SealCheck, CalendarCheck, Eye, Target, ChatCircleDots, FileText, Tag, Drop, Users, Headset, Snowflake } from '@phosphor-icons/react'
@@ -146,7 +146,7 @@ export function About() {
         <Reveal><Img src="greenhouse.jpg" alt="Greenhouse" /></Reveal>
         <Reveal delay={120}><div><p className="eyebrow">Our story</p><h2>Grown where the sun is steady</h2><p className="lead">{C.about}</p></div></Reveal>
       </div></section>
-      <section className="fnd"><div className="wrap">
+      <section className="fnd" id="foundation"><div className="wrap">
         <Reveal><div className="center"><span className="pill">Our Foundation</span><h2>Vision &amp; <span className="acc">Mission</span></h2></div></Reveal>
         <div className="fbox">
           <Reveal><div className="fitem v"><p className="flabel"><Eye size={26} weight="duotone" /> Our Vision</p><p className="ftext">{C.vision}</p></div></Reveal>
@@ -154,7 +154,7 @@ export function About() {
         </div>
         <Reveal><div className="fcard"><h3>Our Commitment</h3><p>{C.about}</p></div></Reveal>
       </div></section>
-      <section><div className="wrap"><Sec e="Gallery" t="Our farms" />
+      <section id="farms"><div className="wrap"><Sec e="Gallery" t="Our farms" />
         <div className="grid">{['seedlings.jpg', 'basil.jpg', 'tarragon.jpg'].map((i, k) => (
           <Reveal key={i} delay={k * 90}><div className="card"><Img src={i} alt="Farm" className="pimg" /></div></Reveal>))}</div></div></section>
     </>
@@ -162,7 +162,8 @@ export function About() {
 }
 
 export function Products() {
-  const [q, setQ] = useState(''); const [cat, setCat] = useState('All')
+  const loc = useLocation(); const [q, setQ] = useState(''); const [cat, setCat] = useState('All')
+  useEffect(() => { setCat(new URLSearchParams(loc.search).get('cat') || 'All') }, [loc.search])
   const cats = ['All', ...new Set(PRODUCTS.map(p => p.cat))]
   const list = PRODUCTS.filter(p => (cat === 'All' || p.cat === cat) && p.name.toLowerCase().includes(q.toLowerCase()))
   return (

@@ -5,7 +5,11 @@ import { Home, About, Products, Export, Contact } from './pages.jsx'
 
 function ScrollTop() {
   const { pathname, hash } = useLocation()
-  useEffect(() => { if (!hash) window.scrollTo(0, 0) }, [pathname, hash])
+  useEffect(() => {
+    if (!hash) { window.scrollTo(0, 0); return }
+    const t = setTimeout(() => document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' }), 120)
+    return () => clearTimeout(t)
+  }, [pathname, hash])
   return null
 }
 

@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf, CaretRight, ArrowUp } from '@phosphor-icons/react'
+import { List, X, Phone, EnvelopeSimple, MapPin, WhatsappLogo, Leaf, CaretRight, ArrowUp, CaretDown, House, Info, Target, Plant, Package, Airplane, Flower, SquaresFour, ArrowRight } from '@phosphor-icons/react'
 import { C } from './data'
 
 export const wa = (t = 'Hello LUMIA FRESH, I would like to enquire about your herbs.') =>
@@ -29,29 +29,69 @@ export function Reveal({ children, delay = 0 }) {
 
 const LINKS = [['/', 'Home'], ['/about', 'About'], ['/products', 'Products'], ['/export', 'Export'], ['/contact', 'Contact']]
 
+const MENU = [
+  { to: '/', label: 'Home' },
+  { label: 'Company', items: [['/about', 'About Us', Info], ['/about#foundation', 'Vision & Mission', Target], ['/about#farms', 'Our Farms', Plant]] },
+  { label: 'Products', items: [['/products', 'All Products', SquaresFour], ['/products?cat=Herbs', 'Herbs', Leaf], ['/products?cat=Flowers', 'Flowers', Flower], ['/products?cat=Botanicals', 'Botanicals', Plant]] },
+  { to: '/export', label: 'Export & Wholesale' },
+  { to: '/contact', label: 'Contact' },
+]
+
 export function Navbar() {
   const [open, setOpen] = useState(false)
   const [sc, setSc] = useState(false)
+  const [grp, setGrp] = useState('Products')
+  const close = () => setOpen(false)
   useEffect(() => {
     const f = () => setSc(window.scrollY > 10)
     f(); window.addEventListener('scroll', f)
     return () => window.removeEventListener('scroll', f)
   }, [])
+  useEffect(() => {
+    document.body.style.overflow = open ? 'hidden' : ''
+    return () => { document.body.style.overflow = '' }
+  }, [open])
   return (
-    <header className={'nav' + (sc ? ' sc' : '')}>
-      <div className="wrap">
-        <Link to="/" className="brand"><Img src="logo.png" alt="LUMIA FRESH" /></Link>
-        <nav className={'links' + (open ? ' open' : '')}>
-          {LINKS.map(([to, l]) => (
-            <NavLink key={to} to={to} end={to === '/'} onClick={() => setOpen(false)}>{l}</NavLink>
+    <>
+      <header className={'nav' + (sc ? ' sc' : '')}>
+        <div className="wrap">
+          <Link to="/" className="brand"><Img src="logo.png" alt="LUMIA FRESH" /></Link>
+          <nav className="links">
+            {LINKS.map(([to, l]) => (
+              <NavLink key={to} to={to} end={to === '/'}>{l}</NavLink>
+            ))}
+            <a href={wa()} className="btn btn-wa" target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
+          </nav>
+          <button className="burger" onClick={() => setOpen(true)} aria-label="Menu"><List size={28} weight="bold" /></button>
+        </div>
+      </header>
+      <div className={'ovl' + (open ? ' on' : '')} onClick={close} />
+      <aside className={'drawer' + (open ? ' on' : '')} aria-hidden={!open}>
+        <div className="dhead">
+          <Link to="/" onClick={close}><Img src="logo.png" alt="LUMIA FRESH" /></Link>
+          <button onClick={close} aria-label="Close menu"><X size={28} weight="bold" /></button>
+        </div>
+        <div className="dbody">
+          {MENU.map(m => m.items ? (
+            <div key={m.label} className={'dgrp' + (grp === m.label ? ' on' : '')}>
+              <button className="dgh" onClick={() => setGrp(grp === m.label ? '' : m.label)}>
+                {m.label}<CaretDown size={18} weight="bold" />
+              </button>
+              <div className="dsub">
+                {m.items.map(([to, l, I]) => (
+                  <Link key={l} to={to} onClick={close}><span className="di"><I size={22} weight="duotone" /></span>{l}</Link>
+                ))}
+              </div>
+            </div>
+          ) : (
+            <Link key={m.label} to={m.to} onClick={close} className="dlink">{m.label}</Link>
           ))}
-          <a href={wa()} className="btn btn-wa" target="_blank" rel="noreferrer"><WhatsappLogo size={20} weight="fill" /> WhatsApp</a>
-        </nav>
-        <button className="burger" onClick={() => setOpen(!open)} aria-label="Menu">
-          {open ? <X size={28} weight="bold" /> : <List size={28} weight="bold" />}
-        </button>
-      </div>
-    </header>
+          <a className="dphone" href={`tel:${C.phone.replace(/\s/g, '')}`}><Phone size={22} weight="duotone" /> {C.phone}</a>
+          <a className="dcta" href={wa('Hello LUMIA FRESH, I would like a quote.')} target="_blank" rel="noreferrer">
+            Request a Quote <ArrowRight size={18} weight="bold" /></a>
+        </div>
+      </aside>
+    </>
   )
 }
 
