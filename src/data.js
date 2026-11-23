@@ -67,7 +67,7 @@ export const PRODUCTS = [
     "name": "Chamomile flowers",
     "cat": "Flowers",
     "desc": "Delicate dried flowers for calming herbal teas.",
-    "img": ""
+    "img": "chamomile.jpg"
   },
   {
     "name": "Marjoram",
