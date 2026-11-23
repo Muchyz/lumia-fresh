@@ -61,7 +61,7 @@ export const PRODUCTS = [
     "name": "Calendula flowers",
     "cat": "Flowers",
     "desc": "Bright petals for teas, skincare and natural products.",
-    "img": ""
+    "img": "calendula.jpg"
   },
   {
     "name": "Chamomile flowers",
