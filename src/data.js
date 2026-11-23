@@ -13,7 +13,7 @@ export const PRODUCTS = [
     "name": "Parsley",
     "cat": "Herbs",
     "desc": "Fresh, flat and curly leaf for retail and foodservice.",
-    "img": ""
+    "img": "parsley.jpg"
   },
   {
     "name": "Basil",
@@ -31,7 +31,7 @@ export const PRODUCTS = [
     "name": "Hibiscus flowers",
     "cat": "Flowers",
     "desc": "Dried calyces for teas, infusions and beverages.",
-    "img": ""
+    "img": "hibiscus.jpg"
   },
   {
     "name": "Sage whole",
