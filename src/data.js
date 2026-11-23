@@ -88,7 +88,7 @@ export const PRODUCTS = [
     "img": "mint.jpg"
   },
   {
-    "name": "Cilantro",
+    "name": "Coriander (Cilantro)",
     "cat": "Herbs",
     "desc": "Fresh coriander leaf from our open highland fields.",
     "img": "cilantro.jpg"
@@ -130,3 +130,14 @@ export const PRODUCTS = [
     "img": "chives.jpg"
   }
 ]
+
+PRODUCTS.push(
+  { name: 'French beans', cat: 'Vegetables', desc: 'Tender, hand-picked fine beans for export markets.', img: 'frenchbeans.jpg' },
+  { name: 'Snow peas', cat: 'Vegetables', desc: 'Crisp, sweet pods packed fresh for retail and foodservice.', img: 'snowpeas.jpg' },
+  { name: 'Kale', cat: 'Vegetables', desc: 'Nutrient-rich leafy greens grown in volcanic highland soils.', img: 'kale.jpg' },
+  { name: 'Chillies', cat: 'Vegetables', desc: 'Fresh chillies with bright colour and consistent heat.', img: 'chillies.jpg' },
+  { name: 'Avocados', cat: 'Fruits', desc: 'Creamy highland avocados, picked and graded for export.', img: 'avocado.jpg' },
+  { name: 'Passion fruit', cat: 'Fruits', desc: 'Aromatic, juicy fruit with an intense tropical flavour.', img: 'passionfruit.jpg' },
+  { name: 'Mangoes', cat: 'Fruits', desc: 'Sweet, fibre-free mangoes harvested at peak ripeness.', img: 'mango.jpg' },
+  { name: 'Pineapples', cat: 'Fruits', desc: 'Sun-ripened pineapples with natural sweetness.', img: 'pineapple.jpg' }
+)
