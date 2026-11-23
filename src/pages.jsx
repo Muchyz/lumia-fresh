@@ -50,7 +50,7 @@ export function Home() {
   return (
     <>
       <section className="hero" id="home">
-        <Img src="cilantro.jpg" alt="Herb fields" />
+        <Img src="hero.jpg" alt="Irrigated herb rows" />
         <div className="wrap">
           <span className="badge"><Leaf size={18} weight="duotone" /> {C.tag}</span>
           <h1>Fresh organic herbs from the <em>heart of the Equator</em></h1>
