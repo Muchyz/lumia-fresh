@@ -32,7 +32,7 @@ const LINKS = [['/', 'Home'], ['/about', 'About'], ['/products', 'Products'], ['
 const MENU = [
   { to: '/', label: 'Home' },
   { label: 'Company', items: [['/about', 'About Us', Info], ['/about#foundation', 'Vision & Mission', Target], ['/about#farms', 'Our Farms', Plant], ['/certifications', 'Certifications', Certificate], ['/gallery', 'Gallery', Plant]] },
-  { label: 'Products', items: [['/products', 'All Products', SquaresFour], ['/products?cat=Herbs', 'Herbs', Leaf], ['/products?cat=Flowers', 'Flowers', Flower], ['/products?cat=Vegetables', 'Vegetables', Plant], ['/products?cat=Fruits', 'Fruits', Leaf]] },
+  { label: 'Products', items: [['/products', 'All Products', SquaresFour], ['/harvest', 'Ready to Harvest', Leaf], ['/products?cat=Herbs', 'Herbs', Leaf], ['/products?cat=Flowers', 'Flowers', Flower], ['/products?cat=Vegetables', 'Vegetables', Plant], ['/products?cat=Fruits', 'Fruits', Leaf]] },
   { to: '/export', label: 'Export & Wholesale' },
   { to: '/contact', label: 'Contact' },
 ]
@@ -132,7 +132,7 @@ export function Footer() {
         </div>
         <div className="ftgrid">
           <Col t="Company" items={[['/', 'Home'], ['/about', 'About Us'], ['/export', 'Export & Wholesale'], ['/certifications', 'Certifications'], ['/testimonials', 'Testimonials'], ['/gallery', 'Gallery'], ['/contact', 'Contact']]} />
-          <Col t="Products" items={[['/products', 'All Products'], ['/products?cat=Herbs', 'Herbs'], ['/products?cat=Vegetables', 'Vegetables'], ['/products?cat=Flowers', 'Flowers'], ['/products?cat=Fruits', 'Fruits']]} />
+          <Col t="Products" items={[['/products', 'All Products'], ['/harvest', 'Ready to Harvest'], ['/products?cat=Herbs', 'Herbs'], ['/products?cat=Vegetables', 'Vegetables'], ['/products?cat=Flowers', 'Flowers'], ['/products?cat=Fruits', 'Fruits']]} />
           <Col t="Support" items={[['/contact', 'Contact Us'], ['/contact', 'Request a Quote'], ['/export', 'Shipping & Packaging'], ['/about', 'Our Story']]} />
         </div>
         <div className="ftsocial">

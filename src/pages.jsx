@@ -219,6 +219,7 @@ export function Products() {
     <>
       <Head t="Our Products" p="Herbs, vegetables, flowers and fruits for export." bg="hero.jpg" />
       <section className="prodsec"><div className="wrap">
+        <Link to="/harvest" className="tm-cta" style={{ marginTop: 0, marginBottom: 18 }}>Ready to Harvest: order now</Link>
         <div className="search"><MagnifyingGlass size={20} weight="duotone" /><input placeholder="Search products..." value={q} onChange={e => setQ(e.target.value)} /></div>
         <div className="chips">{cats.map(c => <button key={c} className={'chip' + (c === cat ? ' on' : '')} onClick={() => setCat(c)}>{c}</button>)}</div>
         <div className="grid">{list.map((p, i) => <ProductCard key={p.name} p={p} i={i} />)}</div>
