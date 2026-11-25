@@ -18,8 +18,19 @@ export default function Harvest() {
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value })
   const add = (c) =>
     setF((s) => ({ ...s, order: (s.order ? s.order + '\n' : '') + c.crop + ' - ___ kg' }))
-  const send = (e) => {
+  const send = async (e) => {
     e.preventDefault()
+    try {
+      await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: 'paste-key-here',
+          subject: 'New local order - LUMIA FRESH',
+          ...f,
+        }),
+      })
+    } catch {}
     const msg =
       'Hello LUMIA FRESH, I would like to place a local order.\n' +
       'Company: ' + f.company + '\nEmail: ' + f.email + '\nPhone: ' + f.phone +
@@ -59,7 +70,7 @@ export default function Harvest() {
           <input required type="email" placeholder="Email address" value={f.email} onChange={set('email')} />
           <input placeholder="Phone (optional)" value={f.phone} onChange={set('phone')} />
           <textarea required rows="5" placeholder="Your order, e.g. Basil - 20 kg" value={f.order} onChange={set('order')} />
-          <button type="submit" className="tm-cta">Send order on WhatsApp</button>
+          <button type="submit" className="tm-cta">Send order</button>
         </form>
       </div>
     </section>
